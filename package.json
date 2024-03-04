@@ -1,0 +1,20 @@
+{
+  "name": "newfront",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@iconify/json": "^2.2.189",
+    "@iconify/tailwind": "^0.1.4",
+    "tailwindcss": "^3.4.1"
+  }
+}

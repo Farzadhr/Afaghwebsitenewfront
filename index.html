@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="lib/BootstrapIcon/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="lib/Swiper/Swiper.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="flex justify-between items-center fixed border-t border-lightgray shadow-inner py-4 w-full bottom-0 bg-white px-5">
+            <span class="icon-[solar--hamburger-menu-linear] w-10 h-10 text-primary"></span>
+            <span class="icon-[solar--heart-angle-linear] w-10 h-10 text-primary"></span>
+            <span class="icon-[solar--bag-3-linear] w-10 h-10 text-primary"></span>
+            <span class="icon-[solar--user-linear] w-10 h-10 text-primary"></span>
+        </div>
+    </header>
+    <main class="pb-32 pt-5">
+        <div class="w-full px-3">
+            <div class="swiper MySwiper w-full">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="h-[400px] w-full bg-primary rounded-lg"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="h-[400px] w-full bg-primary rounded-lg"></div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="h-[400px] w-full bg-primary rounded-lg"></div>
+                    </div>
+                </div>
+                <div class="swiper-button-next after:!text-secondary"></div>
+                <div class="swiper-button-prev after:!text-secondary"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div class="px-2 mt-8 flex flex-wrap justify-center CategoryContainer">
+            <a href="#" class="w-[calc(33.33333%-8px)] mx-1 mb-4 rounded-2xl bg-center bg-cover flex items-end"
+                style="background-image: url(img/Compress_20221019_133439_9263-300x300.jpg);">
+                <div
+                    class="w-full py-1 flex justify-between bg-lightgray bg-opacity-90 rounded-b-2xl font-bold text-sm px-2">
+                    <p class="">مانتو</p> <i class="bi bi-chevron-left"></i>
+                </div>
+            </a>
+            <a href="#" class="w-[calc(33.33333%-8px)] mx-1 mb-4 rounded-2xl bg-center bg-cover flex items-end"
+                style="background-image: url(img/Compress_20221019_133439_9263-300x300.jpg);">
+                <div
+                    class="w-full py-1 flex justify-between bg-lightgray bg-opacity-90 rounded-b-2xl font-bold text-sm px-2">
+                    <p class="">مانتو</p> <i class="bi bi-chevron-left"></i>
+                </div>
+            </a>
+            <a href="#" class="w-[calc(33.33333%-8px)] mx-1 mb-4 rounded-2xl bg-center bg-cover flex items-end"
+                style="background-image: url(img/Compress_20221019_133439_9263-300x300.jpg);">
+                <div
+                    class="w-full py-1 flex justify-between bg-lightgray bg-opacity-90 rounded-b-2xl font-bold text-sm px-2">
+                    <p class="">مانتو</p> <i class="bi bi-chevron-left"></i>
+                </div>
+            </a>
+            <a href="#" class="w-[calc(33.33333%-8px)] mx-1 mb-4 rounded-2xl bg-center bg-cover flex items-end"
+                style="background-image: url(img/Compress_20221019_133439_9263-300x300.jpg);">
+                <div
+                    class="w-full py-1 flex justify-between bg-lightgray bg-opacity-90 rounded-b-2xl font-bold text-sm px-2">
+                    <p class="">مانتو</p> <i class="bi bi-chevron-left"></i>
+                </div>
+            </a>
+            <a href="#" class="w-[calc(33.33333%-8px)] mx-1 mb-4 rounded-2xl bg-center bg-cover flex items-end"
+                style="background-image: url(img/Compress_20221019_133439_9263-300x300.jpg);">
+                <div
+                    class="w-full py-1 flex justify-between bg-lightgray bg-opacity-90 rounded-b-2xl font-bold text-sm px-2">
+                    <p class="">مانتو</p> <i class="bi bi-chevron-left"></i>
+                </div>
+            </a>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+<script src="lib/jquery-3.6.0.min.js"></script>
+<script src="lib/Swiper/Swiepr.min.js"></script>
+<script>
+    var swiper = new Swiper(".MySwiper", {
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+    });
+
+    var catecon = document.querySelectorAll(".CategoryContainer > a")
+    for (var i of catecon) {
+        $(i).css("height", $(i).css("width"));
+    }
+    $("#icon").click(function (e) { 
+        e.preventDefault();
+        if($(this).hasClass("icon-[solar--bag-3-linear]")){
+
+            $(this).removeClass("icon-[solar--bag-3-linear]");
+            $(this).addClass("icon-[solar--bag-3-bold]");
+        }else{
+            $(this).removeClass("icon-[solar--bag-3-bold]");
+            $(this).addClass("icon-[solar--bag-3-linear]");
+        }
+    });
+</script>
+
+</html>
