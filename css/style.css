@@ -680,6 +680,10 @@ body{
   height: 400px;
 }
 
+.h-9 {
+  height: 2.25rem;
+}
+
 .w-8 {
   width: 2rem;
 }
@@ -690,6 +694,10 @@ body{
 
 .w-full {
   width: 100%;
+}
+
+.w-9 {
+  width: 2.25rem;
 }
 
 .flex-wrap {
