@@ -672,20 +672,16 @@ body{
   display: flex;
 }
 
-.h-8 {
-  height: 2rem;
+.h-7 {
+  height: 1.75rem;
 }
 
 .h-\[400px\] {
   height: 400px;
 }
 
-.h-9 {
-  height: 2.25rem;
-}
-
-.w-8 {
-  width: 2rem;
+.w-7 {
+  width: 1.75rem;
 }
 
 .w-\[calc\(33\.33333\%-8px\)\] {
@@ -694,10 +690,6 @@ body{
 
 .w-full {
   width: 100%;
-}
-
-.w-9 {
-  width: 2.25rem;
 }
 
 .flex-wrap {
