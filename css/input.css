@@ -28,7 +28,16 @@
         direction: rtl;
     }
     body{
+        @apply text-primary;
         font-family: Samim;
         font-weight: normal;
+    }
+}
+@layer components{
+    .btn-primary{
+        @apply px-5 py-1 rounded-lg border border-primary hover:bg-primary hover:text-white transition-all duration-300;
+    }
+    .btn-scondary{
+        @apply px-5 py-1 rounded-lg border border-secondary text-secondary hover:bg-secondary hover:text-white transition-all duration-300;
     }
 }
