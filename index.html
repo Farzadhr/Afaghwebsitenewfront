@@ -14,7 +14,7 @@
     <header class="">
         <div
             class="flex justify-between items-center fixed z-50 border-t border-lightgray shadow-inner py-4 w-full bottom-0 bg-white">
-            <a href="" class="flex flex-col items-center justify-center w-1/5">
+            <a href="" class="flex flex-col items-center justify-center w-1/5 ">
                 <span class="icon-[solar--home-2-bold] w-7 h-7 text-primary"></span>
                 <p class="text-xs mt-1">خانه</p>
             </a>
@@ -22,7 +22,7 @@
                 <span class="icon-[solar--shop-linear] w-7 h-7 text-primary"></span>
                 <p class="text-xs mt-1">فروشگاه</p>
             </a>
-            <a href="" class="flex flex-col items-center justify-center w-1/5">
+            <a href="" class="flex flex-col items-center justify-center w-1/5 OpenLoginPopup" data-loggedin="false">
                 <span class="icon-[solar--heart-angle-linear] w-7 h-7 text-primary"></span>
                 <p class="text-xs mt-1">علاقه مندی</p>
             </a>
@@ -30,7 +30,7 @@
                 <span class="icon-[solar--cart-3-outline] w-7 h-7 text-primary"></span>
                 <p class="text-xs mt-1">سبد خرید</p>
             </a>
-            <a href="" class="flex flex-col items-center justify-center w-1/5">
+            <a href="" class="flex flex-col items-center justify-center w-1/5 OpenLoginPopup" data-loggedin="false">
                 <span class="icon-[solar--user-linear] w-7 h-7 text-primary"></span>
                 <p class="text-xs mt-1">پروفایل</p>
             </a>
@@ -102,7 +102,7 @@
         <div class="px-2 mt-10">
             <div class="mt-2 flex justify-between px-2">
                 <h2 class="text-xl text-center font-bold">محصولات جدید</h2>
-                <a href="#" class="btn-scondary text-center">مشاهده همه</a>
+                <a href="#" class="btn-secondary text-center">مشاهده همه</a>
             </div>
             <div class="w-full px-1 mt-5">
                 <div class="swiper productSwiper w-full productslider">
@@ -346,7 +346,7 @@
         <div class="px-2 mt-5">
             <div class="mt-2 flex justify-between px-2">
                 <h2 class="text-xl text-center font-bold">آفاق مگ</h2>
-                <a href="#" class="btn-scondary text-center">مشاهده همه</a>
+                <a href="#" class="btn-secondary text-center">مشاهده همه</a>
             </div>
             <div class="w-full px-1 mt-5">
                 <div class="swiper productSwiper w-full productslider">
@@ -424,11 +424,11 @@
                 <div class="h-20"></div>
                 <div class="flex justify-center">
                     <a href="#"
-                        class="mx-5 h-8 w-8 rounded-full bg-transparent border flex justify-center items-center hover:text-primary hover:border-primary transition-all duration-300"><i
-                            class="bi bi-instagram before:!align-middle"></i></a>
+                        class="mx-5 h-8 w-8 rounded-full bg-transparent border flex justify-center items-center hover:text-primary hover:border-primary transition-all duration-300">
+                        <span class="icon-[lucide--instagram] w-5 h-5"></span></a>
                     <a href="#"
-                        class="mx-5 h-8 w-8 rounded-full bg-transparent border flex justify-center items-center hover:text-primary hover:border-primary transition-all duration-300"><i
-                            class="bi bi-telegram before:!align-middle"></i></a>
+                        class="mx-5 h-8 w-8 rounded-full bg-transparent border flex justify-center items-center hover:text-primary hover:border-primary transition-all duration-300">
+                        <span class="icon-[ic--twotone-telegram] w-5 h-5"></span></a>
                 </div>
             </div>
         </div>
@@ -439,6 +439,19 @@
                     href="https://irandevelopress.com">Irandevelopress</a></p>
         </div>
     </footer>
+
+    <!-- dialog div -->
+    <div class="w-full h-full fixed top-full left-0 z-50 flex justify-center items-end transition-all duration-300"
+        id="LoginPopup">
+        <form class="w-full pt-10 pb-5 bg-white shadow-[0_-25px_50px_-15px_rgb(0,0,0,0.55)] px-6 rounded-t-3xl">
+            <span class="icon-[humbleicons--times] w-7 h-7 -mb-3 cursor-pointer" id="CloseLoginPopup"></span>
+            <h2 class="text-lg font-bold text-primary mb-3 text-center">ورود یا عضویت</h2>
+            <p class="text-sm text-primary mb-5 text-center">برای ادامه لطفا شماره موبایل خود را وارد کنید</p>
+            <input type="text" class="rounded-full border border-gray px-5 py-2 w-full mb-3 shadow-xl"
+                placeholder="شماره موبایل خود را وارد کنید">
+            <button class="w-full btn-secondary rounded-full py-2 bg-secondary text-white">ورود به حساب کاربری</button>
+        </form>
+    </div>
 </body>
 <script src="lib/jquery-3.6.0.min.js"></script>
 <script src="lib/Swiper/Swiepr.min.js"></script>
@@ -514,6 +527,22 @@
         $("#bestProductTimeMin").html(Min);
         $("#bestProductTimeSec").html(Sec);
     }
+
+    $(".OpenLoginPopup").click(function (e) {
+        e.preventDefault();
+        $("#LoginPopup").css("top", "0px");
+        setTimeout(() => {
+            $("#LoginPopup").addClass("bg-[#32323265] backdrop-blur-xl");
+        }, 200)
+
+    });
+    $("#CloseLoginPopup").click(function (e) {
+        e.preventDefault();
+        $("#LoginPopup").removeClass("bg-[#32323265] backdrop-blur-xl");
+        setTimeout(() => {
+            $("#LoginPopup").css("top", "100%");
+        }, 200)
+    });
 </script>
 
 </html>
