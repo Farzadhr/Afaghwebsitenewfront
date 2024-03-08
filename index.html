@@ -443,8 +443,8 @@
     <!-- dialog div -->
     <div class="w-full h-full fixed top-full left-0 z-50 flex justify-center items-end bg-transparent transition-all duration-300"
         id="LoginPopup">
-        <form class="w-full pt-12 pb-8 bg-white shadow-[0_-25px_50px_-15px_rgb(0,0,0,0.55)] px-6 rounded-t-3xl">
-            <span class="icon-[humbleicons--times] w-7 h-7 -mb-3 cursor-pointer" id="CloseLoginPopup"></span>
+        <form class="w-full pt-12 pb-10 bg-white shadow-[0_-25px_50px_-15px_rgb(0,0,0,0.55)] px-6 rounded-t-3xl">
+            <span class="icon-[humbleicons--times] w-7 h-7 cursor-pointer" id="CloseLoginPopup"></span>
             <h2 class="text-lg font-bold text-primary mb-3 text-center">ورود یا عضویت</h2>
             <p class="text-sm text-primary mb-5 text-center">برای ادامه لطفا شماره موبایل خود را وارد کنید</p>
             <input type="text" class="rounded-full border border-gray px-5 py-2 w-full mb-3 shadow-xl"
@@ -531,10 +531,12 @@
     $(".OpenLoginPopup").click(function (e) {
         e.preventDefault();
         $("#LoginPopup").css("top", "0px");
+        $("body").css("overflow-y", "hidden");
     });
     $("#CloseLoginPopup").click(function (e) {
         e.preventDefault();
         $("#LoginPopup").css("top", "100%");
+        $("body").css("overflow-y", "scroll");
     });
 </script>
 
