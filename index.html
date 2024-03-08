@@ -456,6 +456,7 @@
 <script src="lib/jquery-3.6.0.min.js"></script>
 <script src="lib/Swiper/Swiepr.min.js"></script>
 <script>
+    // sliders 
     var swiper = new Swiper(".MySwiper", {
         navigation: {
             nextEl: ".swiper-button-next",
@@ -474,27 +475,21 @@
         },
     });
 
+
+    // Category Container fix height 
     var catecon = document.querySelectorAll(".CategoryContainer > a")
     for (var i of catecon) {
         $(i).css("height", $(i).css("width"));
     }
 
+    // product slider fix height of card 
     var productslidercon = document.querySelectorAll(".productslider > .swiper-wrapper > .swiper-slide > .sliderporductimage")
     for (var i of productslidercon) {
         $(i).css("height", $(i).css("width"));
     }
+    
 
-    $("#icon").click(function (e) {
-        e.preventDefault();
-        if ($(this).hasClass("icon-[solar--bag-3-linear]")) {
-
-            $(this).removeClass("icon-[solar--bag-3-linear]");
-            $(this).addClass("icon-[solar--bag-3-bold]");
-        } else {
-            $(this).removeClass("icon-[solar--bag-3-bold]");
-            $(this).addClass("icon-[solar--bag-3-linear]");
-        }
-    });
+    // for best product timing 
     var BestProductTimeSec = 100000
     var datetime = SecToDaytime(BestProductTimeSec)
     SetDatetimeInBestProductCon(datetime[0], datetime[1], datetime[2], datetime[3])
@@ -528,6 +523,9 @@
         $("#bestProductTimeSec").html(Sec);
     }
 
+
+
+    // for login popup 
     $(".OpenLoginPopup").click(function (e) {
         e.preventDefault();
         $("#LoginPopup").css("top", "0px");

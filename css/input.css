@@ -40,4 +40,16 @@
     .btn-secondary{
         @apply px-5 py-1 rounded-lg border border-secondary text-secondary hover:bg-secondary hover:text-white transition-all duration-300;
     }
+    .btn-primary-fill{
+        @apply px-5 py-1 rounded-lg border border-primary bg-primary text-white hover:bg-white hover:text-primary transition-all duration-300;
+    }
+    .btn-secondary-fill{
+        @apply px-5 py-1 rounded-lg border border-secondary bg-secondary text-white hover:bg-white hover:text-secondary transition-all duration-300;
+    }
+    .pagination-bullet{
+        @apply h-7 w-7 bg-primary text-white flex items-center justify-center rounded-full mx-1;
+    }
+    .pagination-bullet-active{
+        @apply h-7 w-7 bg-secondary text-white flex items-center justify-center rounded-full mx-1;
+    }
 }
