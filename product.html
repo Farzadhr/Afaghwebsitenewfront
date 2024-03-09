@@ -51,11 +51,11 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="img/Compress_20221019_133445_5350.jpg"
-                                class="object-cover w-full h-full rounded-lg" alt="">
+                                class="object-cover w-full h-full rounded-lg" alt="product img thumb" loading="lazy">
                         </div>
                         <div class="swiper-slide">
                             <img src="img/Compress_20221019_133439_9263-300x300.jpg"
-                                class="object-cover w-full h-full rounded-lg" alt="">
+                                class="object-cover w-full h-full rounded-lg" alt="product img thumb" loading="lazy">
                         </div>
                     </div>
                     <div class="swiper-button-next after:!text-primary after:hidden !w-10 !h-10">
@@ -81,7 +81,7 @@
             <div class="mb-3">
                 <h1 class="text-2xl font-bold">مانتو بهاره سایز بزرگ</h1>
                 <div class="mt-2 flex justify-between items-center">
-                    <h2 class="text-2xl font-bold text-secondary">300,000<span class="mx-1">تومان</span></h2> 
+                    <h2 class="text-2xl font-bold text-secondary">300,000<span class="mx-1">تومان</span></h2>
                     <div class="btn-secondary-fill text-sm line-through">600,000 تومان</div>
                 </div>
                 <div class="flex justify-between items-center mt-6">
@@ -148,7 +148,8 @@
                         <div class="px-2">
                             <p class="inline-block mx-2">توسط : <span class="text-primary font-bold">فرزاد
                                     حیدری</span></p>
-                            <p class="inline-block mx-2">تاریخ : <span class="text-secondary font-bold">1402/02/02</span>
+                            <p class="inline-block mx-2">تاریخ : <span
+                                    class="text-secondary font-bold">1402/02/02</span>
                             </p>
                             <p class="mt-2 mr-4 break-words">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت
                             </p>
@@ -196,15 +197,19 @@
                     <h3 class="text-xl font-bold mb-3">افزودن نظر</h3>
                     <div class="mb-2">
                         <label for="" class="block font-bold">نظر <span style="color: red;">*</span></label>
-                        <textarea name="" id="" rows="3" class="w-full border border-gray shadow-lg px-3 py-2 rounded-lg" required placeholder="نظر خود را وارد کنید"></textarea>
+                        <textarea name="" id="" rows="3"
+                            class="w-full border border-gray shadow-lg px-3 py-2 rounded-lg" required
+                            placeholder="نظر خود را وارد کنید"></textarea>
                     </div>
                     <div class="mb-2">
                         <label for="" class="block font-bold">نام <span style="color: red;">*</span></label>
-                        <input type="text" class="w-full border border-gray shadow-lg px-3 py-2 rounded-lg" required placeholder="نام و نام خانوادگی خود را وارد کنید"/>
+                        <input type="text" class="w-full border border-gray shadow-lg px-3 py-2 rounded-lg" required
+                            placeholder="نام و نام خانوادگی خود را وارد کنید" />
                     </div>
                     <div class="mb-2">
                         <label for="" class="block font-bold">ایمیل</label>
-                        <input type="text" class="w-full border border-gray shadow-lg px-3 py-2 rounded-lg" placeholder="ایمیل خود را وارد کنید (اختیاری)"/>
+                        <input type="text" class="w-full border border-gray shadow-lg px-3 py-2 rounded-lg"
+                            placeholder="ایمیل خود را وارد کنید (اختیاری)" />
                     </div>
                     <button class="btn-secondary-fill text-lg font-bold w-full mt-2">ثبت نظر</button>
                 </form>
@@ -280,6 +285,33 @@
 <script src="lib/jquery-3.6.0.min.js"></script>
 <script src="lib/Swiper/Swiepr.min.js"></script>
 <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var lazyLoadDivs = document.querySelectorAll('.lazy-load');
+
+        var options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1 // Adjust the threshold as per your requirement
+        };
+
+        var lazyLoad = function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    var div = entry.target;
+                    div.style.backgroundImage = 'url(' + div.dataset.src + ')';
+                    observer.unobserve(div);
+                }
+            });
+        };
+
+        var observer = new IntersectionObserver(lazyLoad, options);
+
+        lazyLoadDivs.forEach(function (div) {
+            observer.observe(div);
+        });
+    });
+</script>
+<script>
     // sliders 
     var swiper = new Swiper(".Myswiper", {
         navigation: {
@@ -327,10 +359,10 @@
             $(this).addClass("product-select-size-active");
         }
     });
-    $(".modalpagebtn").click(function (e) { 
+    $(".modalpagebtn").click(function (e) {
         e.preventDefault();
         var data = $(this).attr("data-modalname");
-        if($(this).hasClass("select-comment-or-prop-product-active") == false){
+        if ($(this).hasClass("select-comment-or-prop-product-active") == false) {
             $(".modalpagebtn.select-comment-or-prop-product-active").addClass("select-comment-or-prop-product");
             $(".modalpagebtn.select-comment-or-prop-product-active").removeClass("select-comment-or-prop-product-active");
             $(this).removeClass("select-comment-or-prop-product");
