@@ -52,4 +52,22 @@
     .pagination-bullet-active{
         @apply h-7 w-7 bg-secondary text-white flex items-center justify-center rounded-full mx-1;
     }
+    .product-select-color-active{
+        @apply w-9 h-9 rounded-full mx-2 icon-[solar--check-circle-bold];
+    }
+    .product-select-color{
+        @apply w-9 h-9 rounded-full mx-2;
+    }
+    .product-select-size-active{
+        @apply w-9 h-9 rounded-full mx-2 bg-primary text-white flex items-center justify-center text-lg;
+    }
+    .product-select-size{
+        @apply w-9 h-9 rounded-full mx-2 border-primary border bg-transparent text-primary flex items-center justify-center text-lg;
+    }
+    .select-comment-or-prop-product-active{
+        @apply px-5 py-2 text-lg rounded-t-lg text-white bg-primary;
+    }
+    .select-comment-or-prop-product{
+        @apply px-5 py-2 text-lg rounded-t-lg text-primary;
+    }
 }
