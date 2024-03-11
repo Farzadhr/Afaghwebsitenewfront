@@ -15,7 +15,7 @@
         <div
             class="flex justify-between items-center fixed z-50 border-t border-lightgray shadow-inner py-4 w-full bottom-0 bg-white">
             <a href="index.html" class="flex flex-col items-center justify-center w-1/5 ">
-                <span class="icon-[solar--home-2-bold] w-7 h-7 text-primary"></span>
+                <span class="icon-[solar--home-2-linear] w-7 h-7 text-primary"></span>
                 <p class="text-xs mt-1">خانه</p>
             </a>
             <a href="products.html" class="flex flex-col items-center justify-center w-1/5">
@@ -27,7 +27,7 @@
                 <p class="text-xs mt-1">علاقه مندی</p>
             </div>
             <a href="" class="flex flex-col items-center justify-center w-1/5">
-                <span class="icon-[solar--cart-3-outline] w-7 h-7 text-primary"></span>
+                <span class="icon-[solar--cart-3-bold] w-7 h-7 text-primary"></span>
                 <p class="text-xs mt-1">سبد خرید</p>
             </a>
             <div class="flex flex-col items-center justify-center w-1/5 OpenLoginPopup" data-loggedin="false">
@@ -48,59 +48,89 @@
 
         <!-- main cart -->
         <div class="mt-5 px-2 w-full">
-            <table class="border-collapse border-gray border w-full">
+            <table class="border-collapse w-full">
                 <thead>
-                    <tr>
-                        <th class="bg-lightgray text-primary border border-gray w-6/12">محصول</th>
-                        <th class="bg-lightgray text-primary border border-gray w-3/12">جزئیات</th>
-                        <th class="bg-lightgray text-primary border border-gray w-3/12">تعداد</th>
+                    <tr class="border-b border-lightgray">
+                        <th class="text-primary border-l border-gray w-6/12 py-2">محصول</th>
+                        <th class="text-primary border-l border-gray w-3/12 py-2">تعداد</th>
+                        <th class="text-primary w-3/12 py-2">جمع کل</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="">
                     <tr class="border-b border-gray">
-                        <td class="border-l border-gray break-words text-sm py-2">مانتو بهاره سایز بزرگ</td>
-                        <td class="flex items-center justify-center py-2">
-                            <div class="product-select-color w-6 h-6" style="background-color: #111518;"></div>
-                            <div class="product-select-size w-6 h-6 text-sm">45</div>
+                        <td class="border-l border-gray py-2">
+                            <a href="product.html" class="flex flex-col">
+                                <p class="text-sm break-words font-bold mb-2">مانتو سایز بزرگ آفاق</p>
+                                <p class="text-xs mb-2">1,200,000 تومان</p>
+                                <div class="flex justify-start">
+                                    <div class="product-select-color w-6 h-6" style="background-color: #111518;"></div>
+                                    <div class="product-select-size w-6 h-6 text-sm">45</div>
+                                </div>
+                            </a>
                         </td>
-                        <td class="border-r border-gray py-2 ">
+                        <td class="py-2 ">
                             <div class="flex items-center justify-around">
                                 <span class="icon-[ph--plus-bold] itemCartPlus"></span>
                                 <p class="text-lg font-bold">1</p>
                                 <span class="icon-[ph--minus-bold] itemCartMinus"></span>
                             </div>
+                        </td>
+                        <td class="border-r border-gray py-2">
+                            <p class="text-center">1,200,000 تومان</p>
                         </td>
                     </tr>
                     <tr class="border-b border-gray">
-                        <td class="border-l border-gray break-words text-sm py-2">مانتو بهاره سایز بزرگ</td>
-                        <td class="flex items-center justify-center py-2">
-                            <div class="product-select-color w-6 h-6" style="background-color: aqua;"></div>
-                            <div class="product-select-size w-6 h-6 text-sm">46</div>
+                        <td class="border-l border-gray py-2">
+                            <a href="product.html" class="flex flex-col">
+                                <p class="text-sm break-words font-bold mb-2">مانتو سایز بزرگ آفاق</p>
+                                <p class="text-xs mb-2">1,200,000 تومان</p>
+                                <div class="flex justify-start">
+                                    <div class="product-select-color w-6 h-6" style="background-color: #111518;"></div>
+                                    <div class="product-select-size w-6 h-6 text-sm">45</div>
+                                </div>
+                            </a>
                         </td>
-                        <td class="border-r border-gray py-2 ">
+                        <td class="py-2 ">
                             <div class="flex items-center justify-around">
                                 <span class="icon-[ph--plus-bold] itemCartPlus"></span>
                                 <p class="text-lg font-bold">1</p>
                                 <span class="icon-[ph--minus-bold] itemCartMinus"></span>
                             </div>
+                        </td>
+                        <td class="border-r border-gray py-2">
+                            <p class="text-center">1,200,000 تومان</p>
                         </td>
                     </tr>
                     <tr class="border-b border-gray">
-                        <td class="border-l border-gray break-words text-sm py-2">مانتو بهاره سایز بزرگ</td>
-                        <td class="flex items-center justify-center py-2">
-                            <div class="product-select-color w-6 h-6" style="background-color: greenyellow;"></div>
-                            <div class="product-select-size w-6 h-6 text-sm">42</div>
+                        <td class="border-l border-gray py-2">
+                            <a href="product.html" class="flex flex-col">
+                                <p class="text-sm break-words font-bold mb-2">مانتو سایز بزرگ آفاق</p>
+                                <p class="text-xs mb-2">1,200,000 تومان</p>
+                                <div class="flex justify-start">
+                                    <div class="product-select-color w-6 h-6" style="background-color: #111518;"></div>
+                                    <div class="product-select-size w-6 h-6 text-sm">45</div>
+                                </div>
+                            </a>
                         </td>
-                        <td class="border-r border-gray py-2 ">
+                        <td class="py-2 ">
                             <div class="flex items-center justify-around">
                                 <span class="icon-[ph--plus-bold] itemCartPlus"></span>
                                 <p class="text-lg font-bold">1</p>
                                 <span class="icon-[ph--minus-bold] itemCartMinus"></span>
                             </div>
+                        </td>
+                        <td class="border-r border-gray py-2">
+                            <p class="text-center">1,200,000 تومان</p>
                         </td>
                     </tr>
                 </tbody>
             </table>
+            <h2 class="text-xl font-bold text-center mt-8">جمع کل: <span class="text-secondary">5,000,000</span> تومان</h2>
+            <div class="mt-5 flex justify-between">
+                <input type="text" class="py-1 px-2 rounded-lg border border-gray w-7/12" placeholder="کد تخفیف را وارد کنید">
+                <button type="button" class="btn-primary font-bold w-4/12 text-sm px-2 text-center">ثبت کد تخفیف</button>
+            </div>
+            <button type="submit" class="btn-secondary-fill w-full text-lg mt-5">ادامه و تکمیل سفارش</button>
         </div>
     </main>
     <footer class="flex flex-col py-10 bg-lightgray text-primary pb-32">
@@ -167,11 +197,6 @@
                 placeholder="شماره موبایل خود را وارد کنید">
             <button class="w-full btn-secondary rounded-full py-2 bg-secondary text-white">ورود به حساب کاربری</button>
         </form>
-    </div>
-    <!-- dialog div  Cart Page-->
-    <div class="w-full h-[90%] fixed bottom-0 left-0 z-50 hidden justify-center bg-white transition-all duration-300 rounded-t-xl shadow-[0_-25px_50px_-15px_rgb(0,0,0,0.70)] overflow-y-scroll"
-        id="CartPopup">
-
     </div>
 </body>
 <script src="lib/jquery-3.6.0.min.js"></script>
