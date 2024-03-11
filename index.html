@@ -416,7 +416,7 @@
         </div>
     </footer>
 
-    <!-- dialog div -->
+    <!-- dialog div  LoginPage-->
     <div class="w-full h-full fixed top-full left-0 z-50 flex justify-center items-end bg-transparent transition-all duration-300"
         id="LoginPopup">
         <form class="w-full pt-12 pb-10 bg-white shadow-[0_-25px_50px_-15px_rgb(0,0,0,0.55)] px-6 rounded-t-3xl">
@@ -427,6 +427,11 @@
                 placeholder="شماره موبایل خود را وارد کنید">
             <button class="w-full btn-secondary rounded-full py-2 bg-secondary text-white">ورود به حساب کاربری</button>
         </form>
+    </div>
+    <!-- dialog div  Cart Page-->
+    <div class="w-full h-[90%] fixed bottom-0 left-0 z-50 flex justify-center bg-white transition-all duration-300 rounded-t-xl shadow-[0_-25px_50px_-15px_rgb(0,0,0,0.70)] overflow-y-scroll"
+        id="CartPopup">
+
     </div>
 </body>
 <script src="lib/jquery-3.6.0.min.js"></script>
@@ -457,8 +462,45 @@
             observer.observe(div);
         });
     });
+    function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        let expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    function convertFromHex(hex) {
+        var hex = hex.toString();//force conversion
+        var str = '';
+        for (var i = 0; i < hex.length; i += 2)
+            str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+        return str;
+    }
+
+    function convertToHex(str) {
+        var hex = '';
+        for (var i = 0; i < str.length; i++) {
+            hex += '' + str.charCodeAt(i).toString(16);
+        }
+        return hex;
+    }
 </script>
 <script>
+    
     // sliders 
     var swiper = new Swiper(".MySwiper", {
         navigation: {
