@@ -46,6 +46,9 @@
     .btn-secondary-fill{
         @apply px-5 py-1 rounded-lg border border-secondary bg-secondary text-white hover:bg-white hover:text-secondary transition-all duration-300;
     }
+    .input-cart{
+        @apply py-1 px-2 rounded-lg border border-gray;
+    }
     .pagination-bullet{
         @apply h-7 w-7 bg-primary text-white flex items-center justify-center rounded-full mx-1;
     }
@@ -69,5 +72,19 @@
     }
     .select-comment-or-prop-product{
         @apply px-5 py-2 text-lg rounded-t-lg text-primary;
+    }
+    .post-card{
+        @apply border border-gray rounded-lg p-2 flex items-center mb-4;
+    }
+    .post-card-selected{
+        @apply border-secondary border rounded-lg p-2 flex items-center mb-4;
+    }
+    .post-card-selected span{
+        @apply text-secondary;
+    }
+}
+@layer utilities{
+    .text-red{
+        color: red;
     }
 }

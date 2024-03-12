@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="lib/BootstrapIcon/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="lib/Swiper/Swiper.min.css">
+    <link rel="stylesheet" href="lib/Select2/Select2.min.css">
+</head>
+
+<body class="">
+    <header class="">
+        <div
+            class="flex justify-between items-center fixed z-50 border-t border-lightgray shadow-inner py-4 w-full bottom-0 bg-white">
+            <a href="index.html" class="flex flex-col items-center justify-center w-1/5 ">
+                <span class="icon-[solar--home-2-linear] w-7 h-7 text-primary"></span>
+                <p class="text-xs mt-1">خانه</p>
+            </a>
+            <a href="products.html" class="flex flex-col items-center justify-center w-1/5">
+                <span class="icon-[solar--shop-linear] w-7 h-7 text-primary"></span>
+                <p class="text-xs mt-1">فروشگاه</p>
+            </a>
+            <div class="flex flex-col items-center justify-center w-1/5 OpenLoginPopup" data-loggedin="false">
+                <span class="icon-[solar--heart-angle-linear] w-7 h-7 text-primary"></span>
+                <p class="text-xs mt-1">علاقه مندی</p>
+            </div>
+            <a href="" class="flex flex-col items-center justify-center w-1/5">
+                <span class="icon-[solar--cart-3-bold] w-7 h-7 text-primary"></span>
+                <p class="text-xs mt-1">سبد خرید</p>
+            </a>
+            <div class="flex flex-col items-center justify-center w-1/5 OpenLoginPopup" data-loggedin="false">
+                <span class="icon-[solar--user-linear] w-7 h-7 text-primary"></span>
+                <p class="text-xs mt-1">پروفایل</p>
+            </div>
+        </div>
+    </header>
+    <main class="pb-10 pt-5">
+        <h2 class="mt-2 mb-4 text-xl font-bold text-center">ثبت اطلاعات</h2>
+        <form class="flex flex-wrap px-5">
+            <div class="flex flex-col w-full">
+                <div class="flex justify-between mb-4">
+                    <div class="w-1/2 ml-2">
+                        <label for="" class="block text-sm mr-1">نام <span class="text-red">*</span></label>
+                        <input type="text" class="input-cart w-full" required>
+                    </div>
+                    <div class="w-1/2">
+                        <label for="" class="block text-sm mr-1">نام خانوادگی <span class="text-red">*</span></label>
+                        <input type="text" class="input-cart w-full" required>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label for="" class="block text-sm mr-1">نام شرکت <span
+                            class="text-secondary text-xs">اختیاری</span></label>
+                    <input type="text" class="input-cart w-full">
+                </div>
+                <div class="flex justify-between mb-4">
+                    <div class="w-1/2 ml-2">
+                        <label for="" class="block text-sm mr-1">شماره تلفن <span class="text-red">*</span></label>
+                        <input type="text" class="input-cart w-full" disabled>
+                    </div>
+                    <div class="w-1/2">
+                        <label for="" class="block text-sm mr-1">تلفن ثابت <span
+                                class="text-secondary text-xs">اختیاری</span></label>
+                        <input type="text" class="input-cart w-full">
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label for="" class="block text-sm mr-1">ایمیل <span
+                            class="text-secondary text-xs">اختیاری</span></label>
+                    <input type="email" class="input-cart w-full">
+                </div>
+                <div class="mb-4">
+                    <label for="" class="block text-sm mr-1">آدرس کامل <span class="text-red">*</span></label>
+                    <textarea rows="3" class="input-cart w-full" required></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="" class="block text-sm mr-1">انتخاب استان <span class="text-red">*</span></label>
+                    <select name="" id="States" class="input-cart w-full text-right h-10" required>
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="mb-4">
+                    <label for="" class="block text-sm mr-1">انتخاب شهر <span class="text-red">*</span></label>
+                    <select name="" id="Cities" class="input-cart w-full text-right h-10" required disabled>
+                        <option value=""></option>
+                    </select>
+                </div>
+                <div class="mb-8">
+                    <label for="" class="block text-sm mr-1">کد پستی <span class="text-red">*</span></label>
+                    <input type="number" class="input-cart w-full" required />
+                </div>
+                <div class="mb-4">
+                    <label for="" class="block text-sm mr-1">توضیحات سفارش <span
+                            class="text-secondary text-xs">اختیاری</span></label>
+                    <textarea rows="4" class="input-cart w-full"
+                        placeholder="یادداشت درباره سفارش شما ، برای مثال نکات مهم درباره نحوه تحویل سفارش"></textarea>
+                </div>
+            </div>
+            <div class="w-full flex flex-col">
+                <div>
+                    <h2 class="text-2xl font-bold mb-4">حمل و نقل</h2>
+                    <div class="post-card-selected postcard">
+                        <span class="icon-[mdi--truck-fast-outline] w-8 h-8"></span>
+                        <p class="mr-2">ارسال با پیک</p>
+                        <p class="mr-auto border-r border-gray pr-2">35,000 تومان</p>
+                    </div>
+                    <div class="post-card postcard">
+                        <span class="icon-[mdi--truck-fast-outline] w-8 h-8"></span>
+                        <p class="mr-2">ارسال با پیک</p>
+                        <p class="mr-auto border-r border-gray pr-2">رایگان</p>
+                    </div>
+                </div>
+                <h2 class="text-2xl font-bold mb-4 mt-3">نحوه پرداخت</h2>
+                <div class="border border-gray p-3 rounded-lg">
+                    <div class="flex justify-between mb-2">
+                        <p>جمع جز</p>
+                        <p class="text-lg font-bold"><span>1,300,000</span> تومان</p>
+                    </div>
+                    <div class="flex justify-between mb-2">
+                        <p>هزینه ارسال</p>
+                        <p class="text-lg font-bold"><span>35,000</span> تومان</p>
+                    </div>
+                    <div class="flex justify-between text-lg border-t border-gray pt-2">
+                        <p>مبلغ قابل پرداخت</p>
+                        <p class="text-lg font-bold"><span>1,335,000</span> تومان</p>
+                    </div>
+                </div>
+                <div class="border border-gray p-3 mt-8 pt-10 rounded-lg">
+                    <div class="flex justify-around">
+                        <div class="flex flex-col justify-center items-center mb-5">
+                            <img src="https://cdn.zarinpal.com/badges/trustLogo/1.svg" class="h-10" alt="دروازه پرداخت معتبر">
+                            <div class="flex mt-3">
+                                <p class="text-secondary text-lg font-bold mr-2">زرین پال</p>
+                                <span class="icon-[ic--round-check] w-6 h-6 text-secondary"></span>
+                            </div>
+                        </div>
+                        <div class="flex flex-col justify-center items-center mb-5">
+                            <img src="img/Introducing-Bank-Mellat-Logo-Designer-Everything-Need-Know.GFDGFDGFD_1699907359.png" class="h-10" alt="دروازه پرداخت معتبر">
+                            <div class="flex mt-3">
+                                <p class="text-primary text-lg font-bold mr-2">بانک ملت</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="border-t border-gray pt-5 mt-6 px-2 text-justify">
+                        اطلاعات شخصی شما برای پردازش سفارش شما و پشتیبانی از تجربه شما در این وبسایت و برای اهداف دیگری که در <span class="text-secondary">سیاست حفظ حریم
+                        خصوصی</span> توضیح داده شده است استفاده می‌شود.
+                    </div>
+                    <button class="mt-8 btn-secondary-fill w-full text-xl">ثبت سفارش و پرداخت</button>
+                </div>
+            </div>
+        </form>
+    </main>
+    <footer class="flex flex-col py-10 bg-lightgray text-primary pb-32">
+        <div class="flex flex-wrap justify-between px-10">
+            <h2 class=" w-full text-base text-center font-bold">ورود به باشگاه مشتریان مانتو
+                آفاق</h2>
+            <div class="w-full flex justify-center mt-4">
+                <input type="text" placeholder="شماره موبایل"
+                    class="px-5 py-1 rounded-r-lg border border-primary border-b-2 border-l-0 border-b-secondary bg-transparent w-8/12">
+                <button
+                    class="rounded-none bg-secondary rounded-l-lg py-1 border-r-0 border border-b-secondary border-b-2 border-secondary text-white w-4/12">ثبت</button>
+            </div>
+        </div>
+        <div class="h-px w-4/5 mx-auto bg-light my-10 mb-4"></div>
+        <div class="flex flex-wrap px-10">
+            <div class="w-full mt-10 flex flex-col items-center">
+                <p class="text-xl mb-2 font-bold">محصولات</p>
+                <div class="w-8/12 mx-auto h-px bg-primary mb-5"></div>
+                <a href="" class="text-lg hover:text-primary mb-2">مانتو</a>
+                <a href="" class="text-lg hover:text-primary mb-2">شلوار</a>
+                <a href="" class="text-lg hover:text-primary mb-2">محصولات ویژه</a>
+            </div>
+            <div class="w-full mt-10 flex flex-col items-center">
+                <p class="text-xl mb-2 font-bold">حساب کاربری</p>
+                <div class="w-8/12 mx-auto h-px bg-primary mb-5"></div>
+                <a href="" class="text-lg hover:text-primary mb-2">ورود / ثبت نام</a>
+                <a href="" class="text-lg hover:text-primary mb-2">سفارشات</a>
+                <a href="" class="text-lg hover:text-primary mb-2">پیگیری سفارشات</a>
+            </div>
+            <div class="w-full mt-10 pt-2">
+                <p class="text-base break-words"><span class="text-primary">آدرس : &nbsp;</span>تهران نازی آباد ، خیابان
+                    اکبر مشهدی ، مجتمع لوتوس مال ، طبقه همکف ، پلاک 204 ، مانتو سرای آفاق</p>
+                <p class="mt-7"><span class="font-bold">شماره تلفن :</span> 09126963605</p>
+                <p><span class="font-bold">شماره تلفن :</span> 09126963605</p>
+            </div>
+            <div class="w-full mt-10">
+                <div class="h-20"></div>
+                <div class="flex justify-center">
+                    <a href="#"
+                        class="mx-5 h-8 w-8 rounded-full bg-transparent border flex justify-center items-center hover:text-primary hover:border-primary transition-all duration-300">
+                        <span class="icon-[lucide--instagram] w-5 h-5"></span></a>
+                    <a href="#"
+                        class="mx-5 h-8 w-8 rounded-full bg-transparent border flex justify-center items-center hover:text-primary hover:border-primary transition-all duration-300">
+                        <span class="icon-[ic--twotone-telegram] w-5 h-5"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="h-px w-4/5 mx-auto bg-light my-10 mb-4"></div>
+        <div class="flex justify-center flex-wrap px-10">
+            <p class="w-full">کلیه حقوق برای <span class="text-secondary">مانتو آفاق</span> محفوظ می باشد.</p>
+            <p class="mx-5 w-full m-0  text-center">طراحی شده توسط : <a
+                    href="https://irandevelopress.com">Irandevelopress</a></p>
+        </div>
+    </footer>
+
+    <!-- dialog div  LoginPage-->
+    <div class="w-full h-full fixed top-full left-0 z-50 flex justify-center items-end bg-transparent transition-all duration-300"
+        id="LoginPopup">
+        <form class="w-full pt-12 pb-10 bg-white shadow-[0_-25px_50px_-15px_rgb(0,0,0,0.55)] px-6 rounded-t-3xl">
+            <span class="icon-[humbleicons--times] w-7 h-7 cursor-pointer" id="CloseLoginPopup"></span>
+            <h2 class="text-lg font-bold text-primary mb-3 text-center">ورود یا عضویت</h2>
+            <p class="text-sm text-primary mb-5 text-center">برای ادامه لطفا شماره موبایل خود را وارد کنید</p>
+            <input type="text" class="rounded-full border border-gray px-5 py-2 w-full mb-3 shadow-xl"
+                placeholder="شماره موبایل خود را وارد کنید">
+            <button class="w-full btn-secondary rounded-full py-2 bg-secondary text-white">ورود به حساب کاربری</button>
+        </form>
+    </div>
+</body>
+<script src="lib/jquery-3.6.0.min.js"></script>
+<script src="lib/Select2/Select2.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var lazyLoadDivs = document.querySelectorAll('.lazy-load');
+
+        var options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1 // Adjust the threshold as per your requirement
+        };
+
+        var lazyLoad = function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    var div = entry.target;
+                    div.style.backgroundImage = 'url(' + div.dataset.src + ')';
+                    observer.unobserve(div);
+                }
+            });
+        };
+
+        var observer = new IntersectionObserver(lazyLoad, options);
+
+        lazyLoadDivs.forEach(function (div) {
+            observer.observe(div);
+        });
+    });
+    function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        let expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    function convertFromHex(hex) {
+        var hex = hex.toString();//force conversion
+        var str = '';
+        for (var i = 0; i < hex.length; i += 2)
+            str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+        return str;
+    }
+
+    function convertToHex(str) {
+        var hex = '';
+        for (var i = 0; i < str.length; i++) {
+            hex += '' + str.charCodeAt(i).toString(16);
+        }
+        return hex;
+    }
+</script>
+<script>
+
+</script>
+<script>
+    var states;
+    $("#Cities").select2({
+        dir: "rtl",
+        placeholder: "انتخاب شهر",
+        dropdownAutoWidth: true,
+    })
+    fetch('https://iran-locations-api.ir/api/v1/fa/states')
+        .then(response => response.json())
+        .then((json) => {
+            for (var i of json) {
+                var html = `<option value="${i.name}">${i.name}</option>`
+                $("#States")[0].innerHTML += html
+                $("#States").select2({
+                    dir: "rtl",
+                    placeholder: "انتخاب استان",
+                    dropdownAutoWidth: true,
+                })
+            }
+        });
+
+    $("#States").change(function (e) {
+        e.preventDefault();
+        var statesname = this.value
+        fetch('https://iran-locations-api.ir/api/v1/fa/cities?state=' + statesname)
+            .then(response => response.json())
+            .then(json => {
+                var cities = json.cities
+                console.log(cities);
+                $("#Cities").attr("disabled", false);
+                $("#Cities")[0].innerHTML = ""
+                for (var i of json.cities) {
+                    console.log(i);
+                    var html = `<option value="${i.name}">${i.name}</option>`
+                    $("#Cities")[0].innerHTML += html
+                    $("#Cities").select2({
+                        dir: "rtl",
+                        placeholder: "انتخاب شهر",
+                        dropdownAutoWidth: true,
+                    })
+                }
+            });
+    });
+    $(".postcard").click(function (e) {
+        e.preventDefault();
+        $(".postcard").removeClass("post-card-selected");
+        $(".postcard").addClass("post-card");
+        $(this).removeClass("post-card");
+        $(this).addClass("post-card-selected");
+
+    });
+    console.log(states);
+</script>
+
+</html>
