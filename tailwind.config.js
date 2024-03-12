@@ -17,7 +17,7 @@ module.exports = {
     },
     extend: {},
   },
-  plugins: [addDynamicIconSelectors()],
+  plugins: [addDynamicIconSelectors(), require("@tailwindcss/typography")],
 };
 
 //npx tailwindcss -i ./css/input.css -o ./css/style.css --watch
