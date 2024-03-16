@@ -12,13 +12,13 @@
 <body class="">
     <header class="">
         <div
-            class="flex justify-between items-center fixed z-50 border-t border-lightgray shadow-inner py-4 w-full bottom-0 bg-white">
+            class="flex md:hidden justify-between items-center fixed z-50 border-t border-lightgray shadow-inner py-4 w-full bottom-0 bg-white">
             <a href="index.html" class="flex flex-col items-center justify-center w-1/5 ">
-                <span class="icon-[solar--home-2-linear] w-7 h-7 text-primary"></span>
+                <span class="icon-[solar--home-2-bold] w-7 h-7 text-primary"></span>
                 <p class="text-xs mt-1">خانه</p>
             </a>
             <a href="products.html" class="flex flex-col items-center justify-center w-1/5">
-                <span class="icon-[solar--shop-bold] w-7 h-7 text-primary"></span>
+                <span class="icon-[solar--shop-linear] w-7 h-7 text-primary"></span>
                 <p class="text-xs mt-1">فروشگاه</p>
             </a>
             <div class="flex flex-col items-center justify-center w-1/5 OpenLoginPopup" data-loggedin="false">
@@ -34,100 +34,149 @@
                 <p class="text-xs mt-1">پروفایل</p>
             </div>
         </div>
+        <div class="hidden md:flex justify-center items-center bg-lightgray py-3 px-10">
+            <div class="w-3/12">
+                <img src="img/afagh-news_03.png" class="w-48" alt="">
+            </div>
+            <div class="w-6/12 flex justify-center">
+                <a href="" class="mx-5">صفحه اصلی</a>
+                <a href="" class="mx-5">فروشگاه</a>
+                <a href="" class="mx-5">تماس با ما</a>
+                <div class="mx-5 cursor-pointer OpenLoginPopup">حساب کاربری</div>
+            </div>
+            <div class="w-3/12 flex justify-end">
+                <div
+                    class=" mx-3 h-10 w-10 flex justify-center items-center text-primary border border-primary rounded-full hover:bg-primary hover:text-secondary transition-all duration-300">
+                    <span class="icon-[solar--cart-3-outline] w-7 h-7"></span>
+                </div>
+                <div
+                    class="OpenLoginPopup mx-3 h-10 w-10 flex justify-center items-center text-primary border border-primary rounded-full hover:bg-primary hover:text-secondary transition-all duration-300">
+                    <span class="icon-[solar--heart-angle-linear] w-7 h-7"></span>
+                </div>
+                <div
+                    class=" mx-3 h-10 w-10 flex justify-center items-center text-primary border border-primary rounded-full hover:bg-primary hover:text-secondary transition-all duration-300">
+                    <span class="icon-[solar--magnifer-linear] w-6 h-6"></span>
+                </div>
+            </div>
+        </div>
     </header>
     <main class="pb-10">
-        <div class="w-full py-4 px-2 bg-lightgray">
-            <div class="text-lg flex items-center">
+        <div
+            class="w-full flex flex-wrap justify-center md:flex-nowrap py-4 px-2 bg-lightgray md:bg-white md:border-b md:border-b-gray">
+            <div
+                class="w-full md:w-1/2 text-base md:text-lg flex items-center justify-center md:justify-start mb-4 md:mb-0">
                 <p class="text-primary mx-2">خانه</p>
                 <span class="icon-[solar--alt-arrow-left-linear]"></span>
                 <p class="text-primary mx-2">مانتو</p>
                 <span class="icon-[solar--alt-arrow-left-linear]"></span>
                 <p class="text-secondary mx-2">مانتو بهاره سایز بزرگ</p>
             </div>
-        </div>
-        <div class="mt-5 flex flex-col">
-            <div class="px-5">
-                <div class="swiper Myswiper w-full">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="img/Compress_20221019_133445_5350.jpg"
-                                class="object-cover w-full h-full rounded-lg" alt="product img thumb" loading="lazy">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="img/Compress_20221019_133439_9263-300x300.jpg"
-                                class="object-cover w-full h-full rounded-lg" alt="product img thumb" loading="lazy">
-                        </div>
-                    </div>
-                    <div class="swiper-button-next after:!text-primary after:hidden !w-10 !h-10">
-                        <span class="icon-[mingcute--arrow-left-circle-fill] text-primary w-full h-full"></span>
-                    </div>
-                    <div class="swiper-button-prev after:!text-primary after:hidden !w-10 !h-10">
-                        <span class="icon-[mingcute--arrow-right-circle-fill] text-primary w-full h-full"></span>
-                    </div>
-                </div>
-            </div>
-            <!-- <div class="overflow-y-hidden overflow-x-auto pr-2 mt-4">
-                <div class="flex">
-                    <div class="w-20 h-20 flex-shrink-0 object-cover mx-2 rounded-lg border border-primary relative">
-                        <img src="img/Compress_20221019_133445_5350.jpg" class="w-full h-full object-cover rounded-lg"
-                            alt="">
-                        <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-                    </div>
-                </div>
-
-            </div> -->
-        </div>
-        <div class="mt-5 flex flex-col px-5">
-            <div class="mb-3">
-                <h1 class="text-2xl font-bold">مانتو بهاره سایز بزرگ</h1>
-                <div class="mt-2 flex justify-between items-center">
-                    <h2 class="text-2xl font-bold text-secondary">300,000<span class="mx-1">تومان</span></h2>
-                    <div class="btn-secondary-fill text-sm line-through">600,000 تومان</div>
-                </div>
-                <div class="flex justify-between items-center mt-6">
-                    <p class="text-sm">کد محصول : 23452</p>
-                    <div class="flex">
-                        <div class="w-8 h-8 rounded-full bg-primary text-white flex justify-center items-center mx-2">
-                            <span class="icon-[solar--share-bold-duotone] w-5 h-5"></span>
-                        </div>
-                        <div class="w-8 h-8 rounded-full bg-secondary text-white flex justify-center items-center mx-2">
-                            <span class="icon-[solar--heart-angle-outline] w-5 h-5"></span>
-                        </div>
-                    </div>
-                </div>
-                <p class="mt-8 text-justify px-2">
-                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
-                    چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+            <div class="w-full md:w-1/2">
+                <p class="flex justify-center md:justify-end items-center px-5"><span id="minimallink"
+                        class="text-sm md:text-lg">domain.ir/t/3265x</span>
+                    <span><span class="icon-[solar--copy-bold] w-6 h-6 cursor-pointer mx-2"
+                            id="CopyMinimalLink"></span></span>
                 </p>
             </div>
-            <div class="mb-3">
-                <h2 class="text-xl font-bold">انتخاب رنگ</h2>
-                <div class="flex mt-2 selectColorOfProduct">
-                    <div class="product-select-color-active" style="background-color: #494931;"></div>
-                    <div class="product-select-color" style="background-color: #c78b42;"></div>
-                    <div class="product-select-color" style="background-color: #dabba0;"></div>
-                    <div class="product-select-color" style="background-color: #111518;"></div>
+        </div>
+        <div class="flex flex-wrap md:px-10">
+            <div class="w-full md:w-5/12 mt-5 flex flex-col">
+                <div class="px-5">
+                    <div class="swiper Myswiper w-full">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/Compress_20221019_133445_5350.jpg"
+                                    class="object-cover w-full h-full rounded-lg" alt="product img thumb"
+                                    loading="lazy">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/Compress_20221019_133439_9263-300x300.jpg"
+                                    class="object-cover w-full h-full rounded-lg" alt="product img thumb"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                        <div class="swiper-button-next after:!text-primary after:hidden !w-10 !h-10">
+                            <span class="icon-[mingcute--arrow-left-circle-fill] text-primary w-full h-full"></span>
+                        </div>
+                        <div class="swiper-button-prev after:!text-primary after:hidden !w-10 !h-10">
+                            <span class="icon-[mingcute--arrow-right-circle-fill] text-primary w-full h-full"></span>
+                        </div>
+                    </div>
                 </div>
-                <h2 class="text-xl font-bold mt-5">انتخاب سایز</h2>
-                <div class="flex mt-2 selectSizeOfProduct">
-                    <div class="product-select-size-active">45</div>
-                    <div class="product-select-size">45</div>
-                    <div class="product-select-size">45</div>
-                    <div class="product-select-size">45</div>
-                </div>
-                <div class="flex justify-between mt-5">
-                    <input type="number" class="border border-primary w-2/12 rounded-lg pr-2 text-xl font-bold"
-                        value="1" />
-                    <button class="btn-secondary-fill w-9/12 py-2 text-xl font-bold">افزودن به سبد خرید</button>
+                <!-- <div class="overflow-y-hidden overflow-x-auto pr-2 mt-4">
+                    <div class="flex">
+                        <div class="w-20 h-20 flex-shrink-0 object-cover mx-2 rounded-lg border border-primary relative">
+                            <img src="img/Compress_20221019_133445_5350.jpg" class="w-full h-full object-cover rounded-lg"
+                                alt="">
+                            <div class="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
+                        </div>
+                    </div>
+    
+                </div> -->
+            </div>
+            <div class="w-full md:w-7/12">
+                <div class="mt-5 flex flex-col px-5">
+                    <div class="mb-6">
+                        <h1 class="text-2xl font-bold">مانتو بهاره سایز بزرگ</h1>
+                        <div class="mt-2 flex justify-between items-center">
+                            <h2 class="text-2xl font-bold text-secondary">300,000<span class="mx-1">تومان</span></h2>
+                            <div class="btn-secondary-fill text-sm line-through">600,000 تومان</div>
+                        </div>
+                        <div class="flex justify-between items-center mt-6">
+                            <p class="text-sm">کد محصول : 23452</p>
+                            <div class="flex">
+                                <div
+                                    class="w-8 h-8 rounded-full bg-primary text-white flex justify-center items-center mx-2">
+                                    <span class="icon-[solar--share-bold-duotone] w-5 h-5"></span>
+                                </div>
+                                <div
+                                    class="w-8 h-8 rounded-full bg-secondary text-white flex justify-center items-center mx-2">
+                                    <span class="icon-[solar--heart-angle-outline] w-5 h-5"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="mt-8 text-justify px-2">
+                            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک
+                            است،
+                            چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که
+                        </p>
+                        <div class="flex flex-wrap mt-5">
+                            <a href="" class="btn-primary-fill mx-0.5 md:mx-1 mb-2 text-[10px] md:text-xs" rel="tag">مانتو</a>
+                            <a href="" class="btn-primary-fill mx-0.5 md:mx-1 mb-2 text-[10px] md:text-xs" rel="tag">مانتو سایز بزرگ</a>
+                            <a href="" class="btn-primary-fill mx-0.5 md:mx-1 mb-2 text-[10px] md:text-xs" rel="tag">پیراهن</a>
+                            <a href="" class="btn-primary-fill mx-0.5 md:mx-1 mb-2 text-[10px] md:text-xs" rel="tag">شلوار</a>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <h2 class="text-lg font-bold">انتخاب رنگ</h2>
+                        <div class="flex mt-2 selectColorOfProduct">
+                            <div class="product-select-color-active" style="background-color: #494931;"></div>
+                            <div class="product-select-color" style="background-color: #c78b42;"></div>
+                            <div class="product-select-color" style="background-color: #dabba0;"></div>
+                            <div class="product-select-color" style="background-color: #111518;"></div>
+                        </div>
+                        <h2 class="text-lg font-bold mt-5">انتخاب سایز</h2>
+                        <div class="flex mt-2 selectSizeOfProduct">
+                            <div class="product-select-size-active">45</div>
+                            <div class="product-select-size">45</div>
+                            <div class="product-select-size">45</div>
+                            <div class="product-select-size">45</div>
+                        </div>
+                        <div class="flex justify-between mt-5">
+                            <input type="number" class="border border-primary w-2/12 rounded-lg pr-2 text-xl font-bold"
+                                value="1" />
+                            <button class="btn-secondary-fill w-9/12 py-2 text-lg font-bold">افزودن به سبد خرید</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="mt-10 px-5">
+        <div class="mt-10 px-5 md:px-10">
             <div class="flex border-b-2 border-primary justify-start">
                 <div class="select-comment-or-prop-product-active modalpagebtn" data-modalname="property">ویژگی ها</div>
                 <div class="select-comment-or-prop-product modalpagebtn" data-modalname="comment">نظرات (0)</div>
             </div>
-            <div class="mt-5 modalpage block" data-modalpage="property">
+            <div class="mt-5 modalpage block md:px-20" data-modalpage="property">
                 <div class="flex">
                     <div class="w-4/12 py-2 font-bold">جنس</div>
                     <div class="border-b-2 border-b-lightgray w-8/12 py-2">نخ پنبه</div>
@@ -141,7 +190,7 @@
                     <div class="border-b-2 border-b-lightgray w-8/12 py-2">بلند</div>
                 </div>
             </div>
-            <div class="mt-5 modalpage hidden" data-modalpage="comment">
+            <div class="mt-5 modalpage hidden md:px-20" data-modalpage="comment">
                 <div class="mt-6 px-4">
                     <!-- main comment box  -->
                     <div class="mb-4 w-full pb-2">
@@ -216,11 +265,11 @@
             </div>
         </div>
     </main>
-    <footer class="flex flex-col py-10 bg-lightgray text-primary pb-32">
-        <div class="flex flex-wrap justify-between px-10">
-            <h2 class=" w-full text-base text-center font-bold">ورود به باشگاه مشتریان مانتو
+    <footer class="flex flex-col py-10 bg-lightgray text-primary pb-5">
+        <div class="flex flex-wrap md:flex-nowrap justify-between md:justify-center px-10">
+            <h2 class=" w-full md:w-4/12 text-xl text-center font-bold">ورود به باشگاه مشتریان مانتو
                 آفاق</h2>
-            <div class="w-full flex justify-center mt-4">
+            <div class="w-full md:w-4/12 flex justify-center mt-4 md:mt-0">
                 <input type="text" placeholder="شماره موبایل"
                     class="px-5 py-1 rounded-r-lg border border-primary border-b-2 border-l-0 border-b-secondary bg-transparent w-8/12">
                 <button
@@ -228,28 +277,28 @@
             </div>
         </div>
         <div class="h-px w-4/5 mx-auto bg-light my-10 mb-4"></div>
-        <div class="flex flex-wrap px-10">
-            <div class="w-full mt-10 flex flex-col items-center">
+        <div class="flex flex-wrap md:flex-nowrap px-10">
+            <div class="w-full md:w-3/12 mt-10 flex flex-col items-center">
                 <p class="text-xl mb-2 font-bold">محصولات</p>
                 <div class="w-8/12 mx-auto h-px bg-primary mb-5"></div>
                 <a href="" class="text-lg hover:text-primary mb-2">مانتو</a>
                 <a href="" class="text-lg hover:text-primary mb-2">شلوار</a>
                 <a href="" class="text-lg hover:text-primary mb-2">محصولات ویژه</a>
             </div>
-            <div class="w-full mt-10 flex flex-col items-center">
+            <div class="w-full md:w-3/12 mt-10 flex flex-col items-center">
                 <p class="text-xl mb-2 font-bold">حساب کاربری</p>
                 <div class="w-8/12 mx-auto h-px bg-primary mb-5"></div>
                 <a href="" class="text-lg hover:text-primary mb-2">ورود / ثبت نام</a>
                 <a href="" class="text-lg hover:text-primary mb-2">سفارشات</a>
                 <a href="" class="text-lg hover:text-primary mb-2">پیگیری سفارشات</a>
             </div>
-            <div class="w-full mt-10 pt-2">
+            <div class="w-full md:w-3/12 mt-10 pt-2">
                 <p class="text-base break-words"><span class="text-primary">آدرس : &nbsp;</span>تهران نازی آباد ، خیابان
                     اکبر مشهدی ، مجتمع لوتوس مال ، طبقه همکف ، پلاک 204 ، مانتو سرای آفاق</p>
                 <p class="mt-7"><span class="font-bold">شماره تلفن :</span> 09126963605</p>
                 <p><span class="font-bold">شماره تلفن :</span> 09126963605</p>
             </div>
-            <div class="w-full mt-10">
+            <div class="w-full md:w-3/12 mt-10">
                 <div class="h-20"></div>
                 <div class="flex justify-center">
                     <a href="#"
@@ -263,16 +312,17 @@
         </div>
         <div class="h-px w-4/5 mx-auto bg-light my-10 mb-4"></div>
         <div class="flex justify-center flex-wrap px-10">
-            <p class="w-full">کلیه حقوق برای <span class="text-secondary">مانتو آفاق</span> محفوظ می باشد.</p>
+            <p class="w-full md:w-auto">کلیه حقوق برای <span class="text-secondary">مانتو آفاق</span> محفوظ می باشد.</p>
             <p class="mx-5 w-full m-0  text-center">طراحی شده توسط : <a
                     href="https://irandevelopress.com">Irandevelopress</a></p>
         </div>
     </footer>
 
-    <!-- dialog div -->
-    <div class="w-full h-full fixed top-full left-0 z-50 flex justify-center items-end bg-transparent transition-all duration-300"
+    <!-- dialog div  LoginPage-->
+    <div class="w-full h-full fixed top-full left-0 z-50 flex justify-center items-end md:items-center bg-transparent transition-all duration-300"
         id="LoginPopup">
-        <form class="w-full pt-12 pb-10 bg-white shadow-[0_-25px_50px_-15px_rgb(0,0,0,0.55)] px-6 rounded-t-3xl">
+        <form
+            class="w-full md:w-6/12 pt-12 pb-10 bg-white shadow-[0_-25px_50px_-15px_rgb(0,0,0,0.55)] px-6 rounded-t-3xl md:rounded-3xl">
             <span class="icon-[humbleicons--times] w-7 h-7 cursor-pointer" id="CloseLoginPopup"></span>
             <h2 class="text-lg font-bold text-primary mb-3 text-center">ورود یا عضویت</h2>
             <p class="text-sm text-primary mb-5 text-center">برای ادامه لطفا شماره موبایل خود را وارد کنید</p>

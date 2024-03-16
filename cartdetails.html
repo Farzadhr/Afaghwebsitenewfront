@@ -14,9 +14,9 @@
 <body class="">
     <header class="">
         <div
-            class="flex justify-between items-center fixed z-50 border-t border-lightgray shadow-inner py-4 w-full bottom-0 bg-white">
+            class="flex md:hidden justify-between items-center fixed z-50 border-t border-lightgray shadow-inner py-4 w-full bottom-0 bg-white">
             <a href="index.html" class="flex flex-col items-center justify-center w-1/5 ">
-                <span class="icon-[solar--home-2-linear] w-7 h-7 text-primary"></span>
+                <span class="icon-[solar--home-2-bold] w-7 h-7 text-primary"></span>
                 <p class="text-xs mt-1">خانه</p>
             </a>
             <a href="products.html" class="flex flex-col items-center justify-center w-1/5">
@@ -28,7 +28,7 @@
                 <p class="text-xs mt-1">علاقه مندی</p>
             </div>
             <a href="" class="flex flex-col items-center justify-center w-1/5">
-                <span class="icon-[solar--cart-3-bold] w-7 h-7 text-primary"></span>
+                <span class="icon-[solar--cart-3-outline] w-7 h-7 text-primary"></span>
                 <p class="text-xs mt-1">سبد خرید</p>
             </a>
             <div class="flex flex-col items-center justify-center w-1/5 OpenLoginPopup" data-loggedin="false">
@@ -36,11 +36,37 @@
                 <p class="text-xs mt-1">پروفایل</p>
             </div>
         </div>
+        <div class="hidden md:flex justify-center items-center bg-lightgray py-5 px-10">
+            <div class="w-3/12">
+                <img src="img/afagh-news_03.png" class="w-48" alt="">
+            </div>
+            <div class="w-6/12 flex justify-center">
+                <a href="" class="mx-5">صفحه اصلی</a>
+                <a href="" class="mx-5">فروشگاه</a>
+                <a href="" class="mx-5">تماس با ما</a>
+                <div class="mx-5 cursor-pointer OpenLoginPopup">حساب کاربری</div>
+            </div>
+            <div class="w-3/12 flex justify-end">
+                <div
+                    class=" mx-3 h-10 w-10 flex justify-center items-center text-primary border border-primary rounded-full hover:bg-primary hover:text-secondary transition-all duration-300">
+                    <span class="icon-[solar--cart-3-outline] w-7 h-7"></span>
+                </div>
+                <div
+                    class="OpenLoginPopup mx-3 h-10 w-10 flex justify-center items-center text-primary border border-primary rounded-full hover:bg-primary hover:text-secondary transition-all duration-300">
+                    <span class="icon-[solar--heart-angle-linear] w-7 h-7"></span>
+                </div>
+                <div
+                    class=" mx-3 h-10 w-10 flex justify-center items-center text-primary border border-primary rounded-full hover:bg-primary hover:text-secondary transition-all duration-300">
+                    <span class="icon-[solar--magnifer-linear] w-6 h-6"></span>
+                </div>
+            </div>
+        </div>
     </header>
     <main class="pb-10 pt-5">
         <h2 class="mt-2 mb-4 text-xl font-bold text-center">ثبت اطلاعات</h2>
         <form class="flex flex-wrap px-5">
-            <div class="flex flex-col w-full">
+            <div class="flex flex-col w-full md:w-8/12 md:px-5">
+                <h2 class="text-2xl font-bold mb-4">اطلاعات کاربری</h2>
                 <div class="flex justify-between mb-4">
                     <div class="w-1/2 ml-2">
                         <label for="" class="block text-sm mr-1">نام <span class="text-red">*</span></label>
@@ -99,7 +125,7 @@
                         placeholder="یادداشت درباره سفارش شما ، برای مثال نکات مهم درباره نحوه تحویل سفارش"></textarea>
                 </div>
             </div>
-            <div class="w-full flex flex-col">
+            <div class="w-full flex flex-col md:w-4/12 md:px-5">
                 <div>
                     <h2 class="text-2xl font-bold mb-4">حمل و نقل</h2>
                     <div class="post-card-selected postcard">
@@ -131,33 +157,36 @@
                 <div class="border border-gray p-3 mt-8 pt-10 rounded-lg">
                     <div class="flex justify-around">
                         <div class="flex flex-col justify-center items-center mb-5">
-                            <img src="https://cdn.zarinpal.com/badges/trustLogo/1.svg" class="h-10" alt="دروازه پرداخت معتبر">
+                            <img src="https://cdn.zarinpal.com/badges/trustLogo/1.svg" class="h-10"
+                                alt="دروازه پرداخت معتبر">
                             <div class="flex mt-3">
                                 <p class="text-secondary text-lg font-bold mr-2">زرین پال</p>
                                 <span class="icon-[ic--round-check] w-6 h-6 text-secondary"></span>
                             </div>
                         </div>
                         <div class="flex flex-col justify-center items-center mb-5">
-                            <img src="img/Introducing-Bank-Mellat-Logo-Designer-Everything-Need-Know.GFDGFDGFD_1699907359.png" class="h-10" alt="دروازه پرداخت معتبر">
+                            <img src="img/Introducing-Bank-Mellat-Logo-Designer-Everything-Need-Know.GFDGFDGFD_1699907359.png"
+                                class="h-10" alt="دروازه پرداخت معتبر">
                             <div class="flex mt-3">
                                 <p class="text-primary text-lg font-bold mr-2">بانک ملت</p>
                             </div>
                         </div>
                     </div>
                     <div class="border-t border-gray pt-5 mt-6 px-2 text-justify">
-                        اطلاعات شخصی شما برای پردازش سفارش شما و پشتیبانی از تجربه شما در این وبسایت و برای اهداف دیگری که در <span class="text-secondary">سیاست حفظ حریم
-                        خصوصی</span> توضیح داده شده است استفاده می‌شود.
+                        اطلاعات شخصی شما برای پردازش سفارش شما و پشتیبانی از تجربه شما در این وبسایت و برای اهداف دیگری
+                        که در <span class="text-secondary">سیاست حفظ حریم
+                            خصوصی</span> توضیح داده شده است استفاده می‌شود.
                     </div>
                     <button class="mt-8 btn-secondary-fill w-full text-xl">ثبت سفارش و پرداخت</button>
                 </div>
             </div>
         </form>
     </main>
-    <footer class="flex flex-col py-10 bg-lightgray text-primary pb-32">
-        <div class="flex flex-wrap justify-between px-10">
-            <h2 class=" w-full text-base text-center font-bold">ورود به باشگاه مشتریان مانتو
+    <footer class="flex flex-col py-10 bg-lightgray text-primary pb-5">
+        <div class="flex flex-wrap md:flex-nowrap justify-between md:justify-center px-10">
+            <h2 class=" w-full md:w-4/12 text-xl text-center font-bold">ورود به باشگاه مشتریان مانتو
                 آفاق</h2>
-            <div class="w-full flex justify-center mt-4">
+            <div class="w-full md:w-4/12 flex justify-center mt-4 md:mt-0">
                 <input type="text" placeholder="شماره موبایل"
                     class="px-5 py-1 rounded-r-lg border border-primary border-b-2 border-l-0 border-b-secondary bg-transparent w-8/12">
                 <button
@@ -165,28 +194,28 @@
             </div>
         </div>
         <div class="h-px w-4/5 mx-auto bg-light my-10 mb-4"></div>
-        <div class="flex flex-wrap px-10">
-            <div class="w-full mt-10 flex flex-col items-center">
+        <div class="flex flex-wrap md:flex-nowrap px-10">
+            <div class="w-full md:w-3/12 mt-10 flex flex-col items-center">
                 <p class="text-xl mb-2 font-bold">محصولات</p>
                 <div class="w-8/12 mx-auto h-px bg-primary mb-5"></div>
                 <a href="" class="text-lg hover:text-primary mb-2">مانتو</a>
                 <a href="" class="text-lg hover:text-primary mb-2">شلوار</a>
                 <a href="" class="text-lg hover:text-primary mb-2">محصولات ویژه</a>
             </div>
-            <div class="w-full mt-10 flex flex-col items-center">
+            <div class="w-full md:w-3/12 mt-10 flex flex-col items-center">
                 <p class="text-xl mb-2 font-bold">حساب کاربری</p>
                 <div class="w-8/12 mx-auto h-px bg-primary mb-5"></div>
                 <a href="" class="text-lg hover:text-primary mb-2">ورود / ثبت نام</a>
                 <a href="" class="text-lg hover:text-primary mb-2">سفارشات</a>
                 <a href="" class="text-lg hover:text-primary mb-2">پیگیری سفارشات</a>
             </div>
-            <div class="w-full mt-10 pt-2">
+            <div class="w-full md:w-3/12 mt-10 pt-2">
                 <p class="text-base break-words"><span class="text-primary">آدرس : &nbsp;</span>تهران نازی آباد ، خیابان
                     اکبر مشهدی ، مجتمع لوتوس مال ، طبقه همکف ، پلاک 204 ، مانتو سرای آفاق</p>
                 <p class="mt-7"><span class="font-bold">شماره تلفن :</span> 09126963605</p>
                 <p><span class="font-bold">شماره تلفن :</span> 09126963605</p>
             </div>
-            <div class="w-full mt-10">
+            <div class="w-full md:w-3/12 mt-10">
                 <div class="h-20"></div>
                 <div class="flex justify-center">
                     <a href="#"
@@ -200,16 +229,17 @@
         </div>
         <div class="h-px w-4/5 mx-auto bg-light my-10 mb-4"></div>
         <div class="flex justify-center flex-wrap px-10">
-            <p class="w-full">کلیه حقوق برای <span class="text-secondary">مانتو آفاق</span> محفوظ می باشد.</p>
+            <p class="w-full md:w-auto">کلیه حقوق برای <span class="text-secondary">مانتو آفاق</span> محفوظ می باشد.</p>
             <p class="mx-5 w-full m-0  text-center">طراحی شده توسط : <a
                     href="https://irandevelopress.com">Irandevelopress</a></p>
         </div>
     </footer>
 
     <!-- dialog div  LoginPage-->
-    <div class="w-full h-full fixed top-full left-0 z-50 flex justify-center items-end bg-transparent transition-all duration-300"
+    <div class="w-full h-full fixed top-full left-0 z-50 flex justify-center items-end md:items-center bg-transparent transition-all duration-300"
         id="LoginPopup">
-        <form class="w-full pt-12 pb-10 bg-white shadow-[0_-25px_50px_-15px_rgb(0,0,0,0.55)] px-6 rounded-t-3xl">
+        <form
+            class="w-full md:w-6/12 pt-12 pb-10 bg-white shadow-[0_-25px_50px_-15px_rgb(0,0,0,0.55)] px-6 rounded-t-3xl md:rounded-3xl">
             <span class="icon-[humbleicons--times] w-7 h-7 cursor-pointer" id="CloseLoginPopup"></span>
             <h2 class="text-lg font-bold text-primary mb-3 text-center">ورود یا عضویت</h2>
             <p class="text-sm text-primary mb-5 text-center">برای ادامه لطفا شماره موبایل خود را وارد کنید</p>

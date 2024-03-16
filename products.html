@@ -11,13 +11,13 @@
 <body class="">
     <header class="">
         <div
-            class="flex justify-between items-center fixed z-50 border-t border-lightgray shadow-inner py-4 w-full bottom-0 bg-white">
+            class="flex md:hidden justify-between items-center fixed z-50 border-t border-lightgray shadow-inner py-4 w-full bottom-0 bg-white">
             <a href="index.html" class="flex flex-col items-center justify-center w-1/5 ">
-                <span class="icon-[solar--home-2-linear] w-7 h-7 text-primary"></span>
+                <span class="icon-[solar--home-2-bold] w-7 h-7 text-primary"></span>
                 <p class="text-xs mt-1">خانه</p>
             </a>
             <a href="products.html" class="flex flex-col items-center justify-center w-1/5">
-                <span class="icon-[solar--shop-bold] w-7 h-7 text-primary"></span>
+                <span class="icon-[solar--shop-linear] w-7 h-7 text-primary"></span>
                 <p class="text-xs mt-1">فروشگاه</p>
             </a>
             <div class="flex flex-col items-center justify-center w-1/5 OpenLoginPopup" data-loggedin="false">
@@ -33,9 +33,34 @@
                 <p class="text-xs mt-1">پروفایل</p>
             </div>
         </div>
+        <div class="hidden md:flex justify-center items-center bg-lightgray py-5 px-10">
+            <div class="w-3/12">
+                <img src="img/afagh-news_03.png" class="w-48" alt="">
+            </div>
+            <div class="w-6/12 flex justify-center">
+                <a href="" class="mx-5">صفحه اصلی</a>
+                <a href="" class="mx-5">فروشگاه</a>
+                <a href="" class="mx-5">تماس با ما</a>
+                <div class="mx-5 cursor-pointer OpenLoginPopup">حساب کاربری</div>
+            </div>
+            <div class="w-3/12 flex justify-end">
+                <div
+                    class=" mx-3 h-10 w-10 flex justify-center items-center text-primary border border-primary rounded-full hover:bg-primary hover:text-secondary transition-all duration-300">
+                    <span class="icon-[solar--cart-3-outline] w-7 h-7"></span>
+                </div>
+                <div
+                    class="OpenLoginPopup mx-3 h-10 w-10 flex justify-center items-center text-primary border border-primary rounded-full hover:bg-primary hover:text-secondary transition-all duration-300">
+                    <span class="icon-[solar--heart-angle-linear] w-7 h-7"></span>
+                </div>
+                <div
+                    class=" mx-3 h-10 w-10 flex justify-center items-center text-primary border border-primary rounded-full hover:bg-primary hover:text-secondary transition-all duration-300">
+                    <span class="icon-[solar--magnifer-linear] w-6 h-6"></span>
+                </div>
+            </div>
+        </div>
     </header>
     <main class="pb-10 pt-5">
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center md:hidden">
             <h2 class="text-lg font-bold mb-3">جستوجو محصولات</h2>
             <form method="post" class="w-full flex px-10">
                 <input type="text"
@@ -45,60 +70,66 @@
                         class="icon-[solar--arrow-left-outline] w-7 h-7"></span></button>
             </form>
         </div>
-        <div class="w-11/12 h-px bg-primary mx-auto my-5"></div>
+        <div class="w-11/12 h-px bg-primary mx-auto my-5 md:hidden"></div>
         <div class="px-2 my-10 flex flex-wrap justify-center CategoryContainer">
-            <a href="products.html" class="w-[calc(33.33333%-8px)] mx-1 mb-4 rounded-2xl bg-center bg-cover flex items-end lazy-load"
+            <a href="products.html"
+                class="w-[calc(33.33333%-8px)] md:w-[calc(16.666666%-24px)] mx-1 md:mx-3 mb-4 rounded-2xl bg-center bg-cover flex items-end lazy-load"
                 data-src="img/Compress_20221019_133439_9263-300x300.jpg">
                 <div
-                    class="w-full py-1 flex justify-between bg-lightgray bg-opacity-90 rounded-b-2xl font-bold text-sm px-2">
-                    <p class="">مانتو</p> <span class="icon-[solar--alt-arrow-left-linear] w-4 h-4"></span>
+                    class="w-full py-1 flex justify-between items-center bg-lightgray bg-opacity-90 rounded-b-2xl font-bold text-sm px-2">
+                    <p class="md:text-lg">مانتو</p> <span class="icon-[solar--alt-arrow-left-bold] w-5 h-5"></span>
                 </div>
             </a>
-            <a href="products.html" class="w-[calc(33.33333%-8px)] mx-1 mb-4 rounded-2xl bg-center bg-cover flex items-end lazy-load"
+            <a href="products.html"
+                class="w-[calc(33.33333%-8px)] md:w-[calc(16.666666%-24px)] mx-1 md:mx-3 mb-4 rounded-2xl bg-center bg-cover flex items-end lazy-load"
                 data-src="img/Compress_20221019_133439_9263-300x300.jpg">
                 <div
-                    class="w-full py-1 flex justify-between bg-lightgray bg-opacity-90 rounded-b-2xl font-bold text-sm px-2">
-                    <p class="">مانتو</p> <span class="icon-[solar--alt-arrow-left-linear] w-4 h-4"></span>
+                    class="w-full py-1 flex justify-between items-center bg-lightgray bg-opacity-90 rounded-b-2xl font-bold text-sm px-2">
+                    <p class="md:text-lg">مانتو</p> <span class="icon-[solar--alt-arrow-left-bold] w-5 h-5"></span>
                 </div>
             </a>
-            <a href="products.html" class="w-[calc(33.33333%-8px)] mx-1 mb-4 rounded-2xl bg-center bg-cover flex items-end lazy-load"
+            <a href="products.html"
+                class="w-[calc(33.33333%-8px)] md:w-[calc(16.666666%-24px)] mx-1 md:mx-3 mb-4 rounded-2xl bg-center bg-cover flex items-end lazy-load"
                 data-src="img/Compress_20221019_133439_9263-300x300.jpg">
                 <div
-                    class="w-full py-1 flex justify-between bg-lightgray bg-opacity-90 rounded-b-2xl font-bold text-sm px-2">
-                    <p class="">مانتو</p> <span class="icon-[solar--alt-arrow-left-linear] w-4 h-4"></span>
+                    class="w-full py-1 flex justify-between items-center bg-lightgray bg-opacity-90 rounded-b-2xl font-bold text-sm px-2">
+                    <p class="md:text-lg">مانتو</p> <span class="icon-[solar--alt-arrow-left-bold] w-5 h-5"></span>
                 </div>
             </a>
-            <a href="products.html" class="w-[calc(33.33333%-8px)] mx-1 mb-4 rounded-2xl bg-center bg-cover flex items-end lazy-load"
+            <a href="products.html"
+                class="w-[calc(33.33333%-8px)] md:w-[calc(16.666666%-24px)] mx-1 md:mx-3 mb-4 rounded-2xl bg-center bg-cover flex items-end lazy-load"
                 data-src="img/Compress_20221019_133439_9263-300x300.jpg">
                 <div
-                    class="w-full py-1 flex justify-between bg-lightgray bg-opacity-90 rounded-b-2xl font-bold text-sm px-2">
-                    <p class="">مانتو</p> <span class="icon-[solar--alt-arrow-left-linear] w-4 h-4"></span>
+                    class="w-full py-1 flex justify-between items-center bg-lightgray bg-opacity-90 rounded-b-2xl font-bold text-sm px-2">
+                    <p class="md:text-lg">مانتو</p> <span class="icon-[solar--alt-arrow-left-bold] w-5 h-5"></span>
                 </div>
             </a>
-            <a href="products.html" class="w-[calc(33.33333%-8px)] mx-1 mb-4 rounded-2xl bg-center bg-cover flex items-end lazy-load"
+            <a href="products.html"
+                class="w-[calc(33.33333%-8px)] md:w-[calc(16.666666%-24px)] mx-1 md:mx-3 mb-4 rounded-2xl bg-center bg-cover flex items-end lazy-load"
                 data-src="img/Compress_20221019_133439_9263-300x300.jpg">
                 <div
-                    class="w-full py-1 flex justify-between bg-lightgray bg-opacity-90 rounded-b-2xl font-bold text-sm px-2">
-                    <p class="">مانتو</p> <span class="icon-[solar--alt-arrow-left-linear] w-4 h-4"></span>
+                    class="w-full py-1 flex justify-between items-center bg-lightgray bg-opacity-90 rounded-b-2xl font-bold text-sm px-2">
+                    <p class="md:text-lg">مانتو</p> <span class="icon-[solar--alt-arrow-left-bold] w-5 h-5"></span>
                 </div>
             </a>
-            <a href="products.html" class="w-[calc(33.33333%-8px)] mx-1 mb-4 rounded-2xl bg-center bg-cover flex items-end lazy-load"
+            <a href="products.html"
+                class="w-[calc(33.33333%-8px)] md:w-[calc(16.666666%-24px)] mx-1 md:mx-3 mb-4 rounded-2xl bg-center bg-cover flex items-end lazy-load"
                 data-src="img/Compress_20221019_133439_9263-300x300.jpg">
                 <div
-                    class="w-full py-1 flex justify-between bg-lightgray bg-opacity-90 rounded-b-2xl font-bold text-sm px-2">
-                    <p class="">مانتو</p> <span class="icon-[solar--alt-arrow-left-linear] w-4 h-4"></span>
+                    class="w-full py-1 flex justify-between items-center bg-lightgray bg-opacity-90 rounded-b-2xl font-bold text-sm px-2">
+                    <p class="md:text-lg">مانتو</p> <span class="icon-[solar--alt-arrow-left-bold] w-5 h-5"></span>
                 </div>
             </a>
         </div>
-        <div class="flex justify-between px-5">
-            <a href="" class="btn-secondary-fill flex items-center px-2 text-sm">فیلتر محصولات <span
+        <div class="flex justify-between px-5 md:px-32">
+            <a href="" class="btn-secondary-fill flex items-center px-2 text-base">فیلتر محصولات <span
                     class="icon-[solar--filter-bold] mr-2"></span></a>
-            <a href="" class="btn-secondary flex items-center px-2 text-base">ترتیب <span
+            <a href="" class="btn-secondary flex items-center px-2 text-lg">ترتیب <span
                     class="icon-[solar--sort-from-top-to-bottom-outline] mr-2"></span></a>
         </div>
         <h2 class="text-xl text-center font-bold text-primary mt-4 mb-6">دسته بندی : همه</h2>
-        <div class="w-full mt-2 flex flex-wrap productslider">
-            <a href="product.html" class="flex flex-col pb-2 w-[calc(50%-40px)] mx-5 mb-5">
+        <div class="w-full mt-2 flex flex-wrap md:justify-center productslider">
+            <a href="product.html" class="flex flex-col pb-2 w-[calc(50%-40px)] md:w-[calc(25%-40px)] mx-5 mb-5">
                 <div class="w-full rounded-lg bg-cover bg-center shadow-lg sliderporductimage flex justify-end lazy-load"
                     data-src="img/Compress_20221019_133445_5350.jpg">
                     <div
@@ -106,14 +137,14 @@
                         <span class="icon-[iconamoon--heart-bold] w-5 h-5"></span>
                     </div>
                 </div>
-                <p class="text-center break-words mt-3">مانتو بهاره سایز بزرگ</p>
+                <p class="text-center md:text-lg md:font-bold break-words mt-3">مانتو بهاره سایز بزرگ</p>
 
                 <div class="flex justify-between text-sm w-full mt-2">
-                    <p class="">قیمت :</p>
-                    <p class="text-secondary">120,000 تومان</p>
+                    <p class="md:font-bold md:text-lg">قیمت :</p>
+                    <p class="text-secondary md:text-lg md:font-bold">120,000 تومان</p>
                 </div>
             </a>
-            <a href="product.html" class="flex flex-col pb-2 w-[calc(50%-40px)] mx-5 mb-5">
+            <a href="product.html" class="flex flex-col pb-2 w-[calc(50%-40px)] md:w-[calc(25%-40px)] mx-5 mb-5">
                 <div class="w-full rounded-lg bg-cover bg-center shadow-lg sliderporductimage flex justify-end lazy-load"
                     data-src="img/Compress_20221019_133445_5350.jpg">
                     <div
@@ -121,14 +152,14 @@
                         <span class="icon-[iconamoon--heart-bold] w-5 h-5"></span>
                     </div>
                 </div>
-                <p class="text-center break-words mt-3">مانتو بهاره سایز بزرگ</p>
+                <p class="text-center md:text-lg md:font-bold break-words mt-3">مانتو بهاره سایز بزرگ</p>
 
                 <div class="flex justify-between text-sm w-full mt-2">
-                    <p class="">قیمت :</p>
-                    <p class="text-secondary">120,000 تومان</p>
+                    <p class="md:font-bold md:text-lg">قیمت :</p>
+                    <p class="text-secondary md:text-lg md:font-bold">120,000 تومان</p>
                 </div>
             </a>
-            <a href="product.html" class="flex flex-col pb-2 w-[calc(50%-40px)] mx-5 mb-5">
+            <a href="product.html" class="flex flex-col pb-2 w-[calc(50%-40px)] md:w-[calc(25%-40px)] mx-5 mb-5">
                 <div class="w-full rounded-lg bg-cover bg-center shadow-lg sliderporductimage flex justify-end lazy-load"
                     data-src="img/Compress_20221019_133445_5350.jpg">
                     <div
@@ -136,14 +167,14 @@
                         <span class="icon-[iconamoon--heart-bold] w-5 h-5"></span>
                     </div>
                 </div>
-                <p class="text-center break-words mt-3">مانتو بهاره سایز بزرگ</p>
+                <p class="text-center md:text-lg md:font-bold break-words mt-3">مانتو بهاره سایز بزرگ</p>
 
                 <div class="flex justify-between text-sm w-full mt-2">
-                    <p class="">قیمت :</p>
-                    <p class="text-secondary">120,000 تومان</p>
+                    <p class="md:font-bold md:text-lg">قیمت :</p>
+                    <p class="text-secondary md:text-lg md:font-bold">120,000 تومان</p>
                 </div>
             </a>
-            <a href="product.html" class="flex flex-col pb-2 w-[calc(50%-40px)] mx-5 mb-5">
+            <a href="product.html" class="flex flex-col pb-2 w-[calc(50%-40px)] md:w-[calc(25%-40px)] mx-5 mb-5">
                 <div class="w-full rounded-lg bg-cover bg-center shadow-lg sliderporductimage flex justify-end lazy-load"
                     data-src="img/Compress_20221019_133445_5350.jpg">
                     <div
@@ -151,14 +182,14 @@
                         <span class="icon-[iconamoon--heart-bold] w-5 h-5"></span>
                     </div>
                 </div>
-                <p class="text-center break-words mt-3">مانتو بهاره سایز بزرگ</p>
+                <p class="text-center md:text-lg md:font-bold break-words mt-3">مانتو بهاره سایز بزرگ</p>
 
                 <div class="flex justify-between text-sm w-full mt-2">
-                    <p class="">قیمت :</p>
-                    <p class="text-secondary">120,000 تومان</p>
+                    <p class="md:font-bold md:text-lg">قیمت :</p>
+                    <p class="text-secondary md:text-lg md:font-bold">120,000 تومان</p>
                 </div>
             </a>
-            <a href="product.html" class="flex flex-col pb-2 w-[calc(50%-40px)] mx-5 mb-5">
+            <a href="product.html" class="flex flex-col pb-2 w-[calc(50%-40px)] md:w-[calc(25%-40px)] mx-5 mb-5">
                 <div class="w-full rounded-lg bg-cover bg-center shadow-lg sliderporductimage flex justify-end lazy-load"
                     data-src="img/Compress_20221019_133445_5350.jpg">
                     <div
@@ -166,14 +197,14 @@
                         <span class="icon-[iconamoon--heart-bold] w-5 h-5"></span>
                     </div>
                 </div>
-                <p class="text-center break-words mt-3">مانتو بهاره سایز بزرگ</p>
+                <p class="text-center md:text-lg md:font-bold break-words mt-3">مانتو بهاره سایز بزرگ</p>
 
                 <div class="flex justify-between text-sm w-full mt-2">
-                    <p class="">قیمت :</p>
-                    <p class="text-secondary">120,000 تومان</p>
+                    <p class="md:font-bold md:text-lg">قیمت :</p>
+                    <p class="text-secondary md:text-lg md:font-bold">120,000 تومان</p>
                 </div>
             </a>
-            <a href="product.html" class="flex flex-col pb-2 w-[calc(50%-40px)] mx-5 mb-5">
+            <a href="product.html" class="flex flex-col pb-2 w-[calc(50%-40px)] md:w-[calc(25%-40px)] mx-5 mb-5">
                 <div class="w-full rounded-lg bg-cover bg-center shadow-lg sliderporductimage flex justify-end lazy-load"
                     data-src="img/Compress_20221019_133445_5350.jpg">
                     <div
@@ -181,14 +212,14 @@
                         <span class="icon-[iconamoon--heart-bold] w-5 h-5"></span>
                     </div>
                 </div>
-                <p class="text-center break-words mt-3">مانتو بهاره سایز بزرگ</p>
+                <p class="text-center md:text-lg md:font-bold break-words mt-3">مانتو بهاره سایز بزرگ</p>
 
                 <div class="flex justify-between text-sm w-full mt-2">
-                    <p class="">قیمت :</p>
-                    <p class="text-secondary">120,000 تومان</p>
+                    <p class="md:font-bold md:text-lg">قیمت :</p>
+                    <p class="text-secondary md:text-lg md:font-bold">120,000 تومان</p>
                 </div>
             </a>
-            <a href="product.html" class="flex flex-col pb-2 w-[calc(50%-40px)] mx-5 mb-5">
+            <a href="product.html" class="flex flex-col pb-2 w-[calc(50%-40px)] md:w-[calc(25%-40px)] mx-5 mb-5">
                 <div class="w-full rounded-lg bg-cover bg-center shadow-lg sliderporductimage flex justify-end lazy-load"
                     data-src="img/Compress_20221019_133445_5350.jpg">
                     <div
@@ -196,14 +227,14 @@
                         <span class="icon-[iconamoon--heart-bold] w-5 h-5"></span>
                     </div>
                 </div>
-                <p class="text-center break-words mt-3">مانتو بهاره سایز بزرگ</p>
+                <p class="text-center md:text-lg md:font-bold break-words mt-3">مانتو بهاره سایز بزرگ</p>
 
                 <div class="flex justify-between text-sm w-full mt-2">
-                    <p class="">قیمت :</p>
-                    <p class="text-secondary">120,000 تومان</p>
+                    <p class="md:font-bold md:text-lg">قیمت :</p>
+                    <p class="text-secondary md:text-lg md:font-bold">120,000 تومان</p>
                 </div>
             </a>
-            <a href="product.html" class="flex flex-col pb-2 w-[calc(50%-40px)] mx-5 mb-5">
+            <a href="product.html" class="flex flex-col pb-2 w-[calc(50%-40px)] md:w-[calc(25%-40px)] mx-5 mb-5">
                 <div class="w-full rounded-lg bg-cover bg-center shadow-lg sliderporductimage flex justify-end lazy-load"
                     data-src="img/Compress_20221019_133445_5350.jpg">
                     <div
@@ -211,14 +242,14 @@
                         <span class="icon-[iconamoon--heart-bold] w-5 h-5"></span>
                     </div>
                 </div>
-                <p class="text-center break-words mt-3">مانتو بهاره سایز بزرگ</p>
+                <p class="text-center md:text-lg md:font-bold break-words mt-3">مانتو بهاره سایز بزرگ</p>
 
                 <div class="flex justify-between text-sm w-full mt-2">
-                    <p class="">قیمت :</p>
-                    <p class="text-secondary">120,000 تومان</p>
+                    <p class="md:font-bold md:text-lg">قیمت :</p>
+                    <p class="text-secondary md:text-lg md:font-bold">120,000 تومان</p>
                 </div>
             </a>
-            <a href="product.html" class="flex flex-col pb-2 w-[calc(50%-40px)] mx-5 mb-5">
+            <a href="product.html" class="flex flex-col pb-2 w-[calc(50%-40px)] md:w-[calc(25%-40px)] mx-5 mb-5">
                 <div class="w-full rounded-lg bg-cover bg-center shadow-lg sliderporductimage flex justify-end lazy-load"
                     data-src="img/Compress_20221019_133445_5350.jpg">
                     <div
@@ -226,14 +257,14 @@
                         <span class="icon-[iconamoon--heart-bold] w-5 h-5"></span>
                     </div>
                 </div>
-                <p class="text-center break-words mt-3">مانتو بهاره سایز بزرگ</p>
+                <p class="text-center md:text-lg md:font-bold break-words mt-3">مانتو بهاره سایز بزرگ</p>
 
                 <div class="flex justify-between text-sm w-full mt-2">
-                    <p class="">قیمت :</p>
-                    <p class="text-secondary">120,000 تومان</p>
+                    <p class="md:font-bold md:text-lg">قیمت :</p>
+                    <p class="text-secondary md:text-lg md:font-bold">120,000 تومان</p>
                 </div>
             </a>
-            <a href="product.html" class="flex flex-col pb-2 w-[calc(50%-40px)] mx-5 mb-5">
+            <a href="product.html" class="flex flex-col pb-2 w-[calc(50%-40px)] md:w-[calc(25%-40px)] mx-5 mb-5">
                 <div class="w-full rounded-lg bg-cover bg-center shadow-lg sliderporductimage flex justify-end lazy-load"
                     data-src="img/Compress_20221019_133445_5350.jpg">
                     <div
@@ -241,11 +272,11 @@
                         <span class="icon-[iconamoon--heart-bold] w-5 h-5"></span>
                     </div>
                 </div>
-                <p class="text-center break-words mt-3">مانتو بهاره سایز بزرگ</p>
+                <p class="text-center md:text-lg md:font-bold break-words mt-3">مانتو بهاره سایز بزرگ</p>
 
                 <div class="flex justify-between text-sm w-full mt-2">
-                    <p class="">قیمت :</p>
-                    <p class="text-secondary">120,000 تومان</p>
+                    <p class="md:font-bold md:text-lg">قیمت :</p>
+                    <p class="text-secondary md:text-lg md:font-bold">120,000 تومان</p>
                 </div>
             </a>
         </div>
@@ -259,11 +290,11 @@
             <a href="" class="pagination-bullet"><span class="icon-[solar--alt-arrow-left-linear] w-5 h-5"></span></a>
         </div>
     </main>
-    <footer class="flex flex-col py-10 bg-lightgray text-primary pb-32">
-        <div class="flex flex-wrap justify-between px-10">
-            <h2 class=" w-full text-base text-center font-bold">ورود به باشگاه مشتریان مانتو
+    <footer class="flex flex-col py-10 bg-lightgray text-primary pb-5">
+        <div class="flex flex-wrap md:flex-nowrap justify-between md:justify-center px-10">
+            <h2 class=" w-full md:w-4/12 text-xl text-center font-bold">ورود به باشگاه مشتریان مانتو
                 آفاق</h2>
-            <div class="w-full flex justify-center mt-4">
+            <div class="w-full md:w-4/12 flex justify-center mt-4 md:mt-0">
                 <input type="text" placeholder="شماره موبایل"
                     class="px-5 py-1 rounded-r-lg border border-primary border-b-2 border-l-0 border-b-secondary bg-transparent w-8/12">
                 <button
@@ -271,28 +302,28 @@
             </div>
         </div>
         <div class="h-px w-4/5 mx-auto bg-light my-10 mb-4"></div>
-        <div class="flex flex-wrap px-10">
-            <div class="w-full mt-10 flex flex-col items-center">
+        <div class="flex flex-wrap md:flex-nowrap px-10">
+            <div class="w-full md:w-3/12 mt-10 flex flex-col items-center">
                 <p class="text-xl mb-2 font-bold">محصولات</p>
                 <div class="w-8/12 mx-auto h-px bg-primary mb-5"></div>
                 <a href="" class="text-lg hover:text-primary mb-2">مانتو</a>
                 <a href="" class="text-lg hover:text-primary mb-2">شلوار</a>
                 <a href="" class="text-lg hover:text-primary mb-2">محصولات ویژه</a>
             </div>
-            <div class="w-full mt-10 flex flex-col items-center">
+            <div class="w-full md:w-3/12 mt-10 flex flex-col items-center">
                 <p class="text-xl mb-2 font-bold">حساب کاربری</p>
                 <div class="w-8/12 mx-auto h-px bg-primary mb-5"></div>
                 <a href="" class="text-lg hover:text-primary mb-2">ورود / ثبت نام</a>
                 <a href="" class="text-lg hover:text-primary mb-2">سفارشات</a>
                 <a href="" class="text-lg hover:text-primary mb-2">پیگیری سفارشات</a>
             </div>
-            <div class="w-full mt-10 pt-2">
+            <div class="w-full md:w-3/12 mt-10 pt-2">
                 <p class="text-base break-words"><span class="text-primary">آدرس : &nbsp;</span>تهران نازی آباد ، خیابان
                     اکبر مشهدی ، مجتمع لوتوس مال ، طبقه همکف ، پلاک 204 ، مانتو سرای آفاق</p>
                 <p class="mt-7"><span class="font-bold">شماره تلفن :</span> 09126963605</p>
                 <p><span class="font-bold">شماره تلفن :</span> 09126963605</p>
             </div>
-            <div class="w-full mt-10">
+            <div class="w-full md:w-3/12 mt-10">
                 <div class="h-20"></div>
                 <div class="flex justify-center">
                     <a href="#"
@@ -306,16 +337,17 @@
         </div>
         <div class="h-px w-4/5 mx-auto bg-light my-10 mb-4"></div>
         <div class="flex justify-center flex-wrap px-10">
-            <p class="w-full">کلیه حقوق برای <span class="text-secondary">مانتو آفاق</span> محفوظ می باشد.</p>
+            <p class="w-full md:w-auto">کلیه حقوق برای <span class="text-secondary">مانتو آفاق</span> محفوظ می باشد.</p>
             <p class="mx-5 w-full m-0  text-center">طراحی شده توسط : <a
                     href="https://irandevelopress.com">Irandevelopress</a></p>
         </div>
     </footer>
 
-    <!-- dialog div -->
-    <div class="w-full h-full fixed top-full left-0 z-50 flex justify-center items-end bg-transparent transition-all duration-300"
+    <!-- dialog div  LoginPage-->
+    <div class="w-full h-full fixed top-full left-0 z-50 flex justify-center items-end md:items-center bg-transparent transition-all duration-300"
         id="LoginPopup">
-        <form class="w-full pt-12 pb-10 bg-white shadow-[0_-25px_50px_-15px_rgb(0,0,0,0.55)] px-6 rounded-t-3xl">
+        <form
+            class="w-full md:w-6/12 pt-12 pb-10 bg-white shadow-[0_-25px_50px_-15px_rgb(0,0,0,0.55)] px-6 rounded-t-3xl md:rounded-3xl">
             <span class="icon-[humbleicons--times] w-7 h-7 cursor-pointer" id="CloseLoginPopup"></span>
             <h2 class="text-lg font-bold text-primary mb-3 text-center">ورود یا عضویت</h2>
             <p class="text-sm text-primary mb-5 text-center">برای ادامه لطفا شماره موبایل خود را وارد کنید</p>
