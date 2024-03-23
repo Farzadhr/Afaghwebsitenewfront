@@ -2836,6 +2836,10 @@ body {
     margin-bottom: 5rem;
   }
 
+  .md\:mb-4 {
+    margin-bottom: 1rem;
+  }
+
   .md\:flex {
     display: flex;
   }
@@ -2906,6 +2910,10 @@ body {
 
   .md\:w-9\/12 {
     width: 75%;
+  }
+
+  .md\:w-1 {
+    width: 0.25rem;
   }
 
   .md\:flex-row {
