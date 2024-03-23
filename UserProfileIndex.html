@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="lib/BootstrapIcon/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="lib/Swiper/Swiper.min.css">
+</head>
+
+<body class="">
+    <header class="">
+        <div
+            class="flex md:hidden justify-between items-center fixed z-50 border-t border-lightgray shadow-inner py-4 w-full bottom-0 bg-white">
+            <a href="index.html" class="flex flex-col items-center justify-center w-1/5 ">
+                <span class="icon-[solar--home-2-bold] w-7 h-7 text-primary"></span>
+                <p class="text-xs mt-1">خانه</p>
+            </a>
+            <a href="products.html" class="flex flex-col items-center justify-center w-1/5">
+                <span class="icon-[solar--shop-linear] w-7 h-7 text-primary"></span>
+                <p class="text-xs mt-1">فروشگاه</p>
+            </a>
+            <div class="flex flex-col items-center justify-center w-1/5 OpenLoginPopup" data-loggedin="false">
+                <span class="icon-[solar--heart-angle-linear] w-7 h-7 text-primary"></span>
+                <p class="text-xs mt-1">علاقه مندی</p>
+            </div>
+            <a href="" class="flex flex-col items-center justify-center w-1/5">
+                <span class="icon-[solar--cart-3-outline] w-7 h-7 text-primary"></span>
+                <p class="text-xs mt-1">سبد خرید</p>
+            </a>
+            <div class="flex flex-col items-center justify-center w-1/5 OpenLoginPopup" data-loggedin="false">
+                <span class="icon-[solar--user-linear] w-7 h-7 text-primary"></span>
+                <p class="text-xs mt-1">پروفایل</p>
+            </div>
+        </div>
+        <div class="hidden md:flex justify-center items-center bg-lightgray py-5 px-10">
+            <div class="w-3/12">
+                <img src="img/afagh-news_03.png" class="w-48" alt="">
+            </div>
+            <div class="w-6/12 flex justify-center">
+                <a href="" class="mx-5">صفحه اصلی</a>
+                <a href="" class="mx-5">فروشگاه</a>
+                <a href="" class="mx-5">تماس با ما</a>
+                <div class="mx-5 cursor-pointer OpenLoginPopup">حساب کاربری</div>
+            </div>
+            <div class="w-3/12 flex justify-end">
+                <div
+                    class=" mx-3 h-10 w-10 flex justify-center items-center text-primary border border-primary rounded-full hover:bg-primary hover:text-secondary transition-all duration-300">
+                    <span class="icon-[solar--cart-3-outline] w-7 h-7"></span>
+                </div>
+                <div
+                    class="OpenLoginPopup mx-3 h-10 w-10 flex justify-center items-center text-primary border border-primary rounded-full hover:bg-primary hover:text-secondary transition-all duration-300">
+                    <span class="icon-[solar--heart-angle-linear] w-7 h-7"></span>
+                </div>
+                <div
+                    class=" mx-3 h-10 w-10 flex justify-center items-center text-primary border border-primary rounded-full hover:bg-primary hover:text-secondary transition-all duration-300">
+                    <span class="icon-[solar--magnifer-linear] w-6 h-6"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="py-10">
+        <div class="flex flex-wrap md:flex-nowrap px-5">
+            <div
+                class="w-full self-start md:w-3/12 mb-8 md:mb-0 md:mx-2 py-5 px-2 border-t-2 border-t-secondary rounded-lg shadow-xl flex flex-col">
+                <!-- <h2 class="text-xl text-center pb-3 font-bold">فرزاد حیدری</h2> -->
+                <h2 class="text-xl text-center pb-6 font-bold">کاربر <span class="font-normal text-sm">لطفا مشخصات خود
+                        را کامل کنید</span></h2>
+
+                <div class="flex flex-col">
+                    <a href="#" class="flex items-center mb-5">
+                        <div class="ml-auto flex">
+                            <span class="icon-[solar--user-id-linear] w-6 h-6"></span>
+                            <p class="mr-3">اطلاعات کاربر</p>
+                        </div>
+                        <span class="icon-[solar--double-alt-arrow-left-bold] w-6 h-6"></span>
+                    </a>
+                    <a href="#" class="flex items-center mb-5">
+                        <div class="ml-auto flex">
+                            <span class="icon-[solar--map-point-broken] w-6 h-6"></span>
+                            <p class="mr-3">اطلاعات آدرس</p>
+                        </div>
+                        <span class="icon-[solar--double-alt-arrow-left-bold] w-6 h-6"></span>
+                    </a>
+                    <a href="#" class="flex items-center mb-5">
+                        <div class="ml-auto flex">
+                            <span class="icon-[solar--bag-check-broken] w-6 h-6"></span>
+                            <p class="mr-3">سفارشات</p>
+                        </div>
+                        <span class="icon-[solar--double-alt-arrow-left-bold] w-6 h-6"></span>
+                    </a>
+                    <a href="#" class="flex items-center mb-5">
+                        <div class="ml-auto flex">
+                            <span class="icon-[solar--key-minimalistic-outline] w-6 h-6"></span>
+                            <p class="mr-3">تغییر رمز عبور</p>
+                        </div>
+                        <span class="icon-[solar--double-alt-arrow-left-bold] w-6 h-6"></span>
+                    </a>
+                    <a href="#" class="flex items-center">
+                        <div class="ml-auto flex">
+                            <span class="icon-[solar--exit-linear] w-6 h-6"></span>
+                            <p class="mr-3">خروج از حساب</p>
+                        </div>
+                        <span class="icon-[solar--double-alt-arrow-left-bold] w-6 h-6"></span>
+                    </a>
+                </div>
+            </div>
+            <form method="post" class="w-full md:w-9/12 md:mx-2 py-5 px-2 rounded-lg bg-lightgray flex flex-col">
+                <h2 class="text-lg text-center font-bold mb-2 md:mb-5">اطلاعات کاربر</h2>
+                <div class="flex flex-wrap md:flex-nowrap mb-4">
+                    <div class="w-full md:w-1/2 px-2 mb-3 md:mb-0">
+                        <label for="" class="block mb-1 mr-3">نام</label>
+                        <input type="text" class="input-cart w-full" value="فرزاد">
+                    </div>
+                    <div class="w-full md:w-1/2 px-2">
+                        <label for="" class="block mb-1 mr-3">نام خانوادگی</label>
+                        <input type="text" class="input-cart w-full" value="حیدری">
+                    </div>
+                </div>
+                <div class="flex flex-wrap md:flex-nowrap mb-4">
+                    <div class="w-full md:w-1/2 px-2 mb-3 md:mb-0">
+                        <label for="" class="block mb-1 mr-3">شماره تلفن</label>
+                        <input type="text" class="input-cart w-full" value="09331990212" disabled>
+                    </div>
+                    <div class="w-full md:w-1/2 px-2">
+                        <label for="" class="block mb-1 mr-3">ایمیل</label>
+                        <input type="text" class="input-cart w-full" value="fheydari207@gmail.com">
+                    </div>
+                </div>
+                <div class="flex justify-center px-5 mt-3">
+                    <button class="btn-secondary-fill w-full md:w-1/2">ثبت اطلاعات جدید</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="flex flex-col py-10 bg-lightgray text-primary pb-5">
+        <div class="flex flex-wrap md:flex-nowrap justify-between md:justify-center px-10">
+            <h2 class=" w-full md:w-4/12 text-xl text-center font-bold">ورود به باشگاه مشتریان مانتو
+                آفاق</h2>
+            <div class="w-full md:w-4/12 flex justify-center mt-4 md:mt-0">
+                <input type="text" placeholder="شماره موبایل"
+                    class="px-5 py-1 rounded-r-lg border border-primary border-b-2 border-l-0 border-b-secondary bg-transparent w-8/12">
+                <button
+                    class="rounded-none bg-secondary rounded-l-lg py-1 border-r-0 border border-b-secondary border-b-2 border-secondary text-white w-4/12">ثبت</button>
+            </div>
+        </div>
+        <div class="h-px w-4/5 mx-auto bg-light my-10 mb-4"></div>
+        <div class="flex flex-wrap md:flex-nowrap px-10">
+            <div class="w-full md:w-3/12 mt-10 flex flex-col items-center">
+                <p class="text-xl mb-2 font-bold">محصولات</p>
+                <div class="w-8/12 mx-auto h-px bg-primary mb-5"></div>
+                <a href="" class="text-lg hover:text-primary mb-2">مانتو</a>
+                <a href="" class="text-lg hover:text-primary mb-2">شلوار</a>
+                <a href="" class="text-lg hover:text-primary mb-2">محصولات ویژه</a>
+            </div>
+            <div class="w-full md:w-3/12 mt-10 flex flex-col items-center">
+                <p class="text-xl mb-2 font-bold">حساب کاربری</p>
+                <div class="w-8/12 mx-auto h-px bg-primary mb-5"></div>
+                <a href="" class="text-lg hover:text-primary mb-2">ورود / ثبت نام</a>
+                <a href="" class="text-lg hover:text-primary mb-2">سفارشات</a>
+                <a href="" class="text-lg hover:text-primary mb-2">پیگیری سفارشات</a>
+            </div>
+            <div class="w-full md:w-3/12 mt-10 pt-2">
+                <p class="text-base break-words"><span class="text-primary">آدرس : &nbsp;</span>تهران نازی آباد ، خیابان
+                    اکبر مشهدی ، مجتمع لوتوس مال ، طبقه همکف ، پلاک 204 ، مانتو سرای آفاق</p>
+                <p class="mt-7"><span class="font-bold">شماره تلفن :</span> 09126963605</p>
+                <p><span class="font-bold">شماره تلفن :</span> 09126963605</p>
+            </div>
+            <div class="w-full md:w-3/12 mt-10">
+                <div class="h-20"></div>
+                <div class="flex justify-center">
+                    <a href="#"
+                        class="mx-5 h-8 w-8 rounded-full bg-transparent border flex justify-center items-center hover:text-primary hover:border-primary transition-all duration-300">
+                        <span class="icon-[lucide--instagram] w-5 h-5"></span></a>
+                    <a href="#"
+                        class="mx-5 h-8 w-8 rounded-full bg-transparent border flex justify-center items-center hover:text-primary hover:border-primary transition-all duration-300">
+                        <span class="icon-[ic--twotone-telegram] w-5 h-5"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="h-px w-4/5 mx-auto bg-light my-10 mb-4"></div>
+        <div class="flex justify-center flex-wrap px-10">
+            <p class="w-full md:w-auto">کلیه حقوق برای <span class="text-secondary">مانتو آفاق</span> محفوظ می باشد.</p>
+            <p class="mx-5 w-full m-0  text-center">طراحی شده توسط : <a
+                    href="https://irandevelopress.com">Irandevelopress</a></p>
+        </div>
+    </footer>
+
+    <!-- dialog div  LoginPage-->
+    <div class="w-full h-full fixed top-full left-0 z-50 flex justify-center items-end md:items-center bg-transparent transition-all duration-300"
+        id="LoginPopup">
+        <form
+            class="w-full md:w-6/12 pt-12 pb-10 bg-white shadow-[0_-25px_50px_-15px_rgb(0,0,0,0.55)] px-6 rounded-t-3xl md:rounded-3xl">
+            <span class="icon-[humbleicons--times] w-7 h-7 cursor-pointer" id="CloseLoginPopup"></span>
+            <h2 class="text-lg font-bold text-primary mb-3 text-center">ورود یا عضویت</h2>
+            <p class="text-sm text-primary mb-5 text-center">برای ادامه لطفا شماره موبایل خود را وارد کنید</p>
+            <input type="text" class="rounded-full border border-gray px-5 py-2 w-full mb-3 shadow-xl"
+                placeholder="شماره موبایل خود را وارد کنید">
+            <button class="w-full btn-secondary rounded-full py-2 bg-secondary text-white">ورود به حساب کاربری</button>
+        </form>
+    </div>
+
+</body>
+<script src="lib/jquery-3.6.0.min.js"></script>
+<script src="lib/Swiper/Swiepr.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var lazyLoadDivs = document.querySelectorAll('.lazy-load');
+
+        var options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1 // Adjust the threshold as per your requirement
+        };
+
+        var lazyLoad = function (entries, observer) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    var div = entry.target;
+                    div.style.backgroundImage = 'url(' + div.dataset.src + ')';
+                    observer.unobserve(div);
+                }
+            });
+        };
+
+        var observer = new IntersectionObserver(lazyLoad, options);
+
+        lazyLoadDivs.forEach(function (div) {
+            observer.observe(div);
+        });
+    });
+    function setCookie(cname, cvalue, exdays) {
+        const d = new Date();
+        d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+        let expires = "expires=" + d.toUTCString();
+        document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+    }
+    function getCookie(cname) {
+        let name = cname + "=";
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    function convertFromHex(hex) {
+        var hex = hex.toString();//force conversion
+        var str = '';
+        for (var i = 0; i < hex.length; i += 2)
+            str += String.fromCharCode(parseInt(hex.substr(i, 2), 16));
+        return str;
+    }
+
+    function convertToHex(str) {
+        var hex = '';
+        for (var i = 0; i < str.length; i++) {
+            hex += '' + str.charCodeAt(i).toString(16);
+        }
+        return hex;
+    }
+</script>
+<script>
+
+    // for login popup 
+    $(".OpenLoginPopup").click(function (e) {
+        e.preventDefault();
+        $("#LoginPopup").css("top", "0px");
+        $("body").css("overflow-y", "hidden");
+    });
+    $("#CloseLoginPopup").click(function (e) {
+        e.preventDefault();
+        $("#LoginPopup").css("top", "100%");
+        $("body").css("overflow-y", "scroll");
+    });
+</script>
+
+</html>
