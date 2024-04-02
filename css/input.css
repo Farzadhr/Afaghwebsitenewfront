@@ -62,10 +62,10 @@
         @apply w-9 h-9 rounded-full mx-2;
     }
     .product-select-size-active{
-        @apply w-9 h-9 rounded-full mx-2 bg-primary text-white flex items-center justify-center text-lg;
+        @apply rounded-lg px-2 py-1 mx-2 bg-primary text-white flex items-center justify-center text-lg;
     }
     .product-select-size{
-        @apply w-9 h-9 rounded-full mx-2 border-primary border bg-transparent text-primary flex items-center justify-center text-lg;
+        @apply rounded-lg px-2 py-1 mx-2 border-primary border bg-transparent text-primary flex items-center justify-center text-lg;
     }
     .select-comment-or-prop-product-active{
         @apply px-5 py-2 text-lg rounded-t-lg text-white bg-primary;

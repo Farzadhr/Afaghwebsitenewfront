@@ -122,10 +122,10 @@
             </a>
         </div>
         <div class="flex justify-between px-5 md:px-32">
-            <a href="" class="btn-secondary-fill flex items-center px-2 text-base">فیلتر محصولات <span
-                    class="icon-[solar--filter-bold] mr-2"></span></a>
-            <a href="" class="btn-secondary flex items-center px-2 text-lg">ترتیب <span
-                    class="icon-[solar--sort-from-top-to-bottom-outline] mr-2"></span></a>
+            <div class="btn-secondary-fill flex items-center px-2 text-base cursor-pointer" id="FilterProductOpen">فیلتر محصولات <span
+                    class="icon-[solar--filter-bold] mr-2"></span></div>
+            <div class="btn-secondary cursor-pointer flex items-center px-2 text-lg" id="SortProductOpen">ترتیب <span
+                    class="icon-[solar--sort-from-top-to-bottom-outline] mr-2"></span></div>
         </div>
         <h2 class="text-xl text-center font-bold text-primary mt-4 mb-6">دسته بندی : همه</h2>
         <div class="w-full mt-2 flex flex-wrap md:justify-center productslider">
@@ -344,16 +344,35 @@
     </footer>
 
     <!-- dialog div  LoginPage-->
-    <div class="w-full h-full fixed top-full left-0 z-50 flex justify-center items-end md:items-center bg-transparent transition-all duration-300"
-        id="LoginPopup">
+    <div class="w-full h-full fixed top-full left-0 z-50 flex justify-center items-end md:items-center bg-transparent transition-all duration-300 backdrop-blur-xl"
+        id="FilterProduct">
         <form
             class="w-full md:w-6/12 pt-12 pb-10 bg-white shadow-[0_-25px_50px_-15px_rgb(0,0,0,0.55)] px-6 rounded-t-3xl md:rounded-3xl">
-            <span class="icon-[humbleicons--times] w-7 h-7 cursor-pointer" id="CloseLoginPopup"></span>
-            <h2 class="text-lg font-bold text-primary mb-3 text-center">ورود یا عضویت</h2>
-            <p class="text-sm text-primary mb-5 text-center">برای ادامه لطفا شماره موبایل خود را وارد کنید</p>
-            <input type="text" class="rounded-full border border-gray px-5 py-2 w-full mb-3 shadow-xl"
-                placeholder="شماره موبایل خود را وارد کنید">
-            <button class="w-full btn-secondary rounded-full py-2 bg-secondary text-white">ورود به حساب کاربری</button>
+            <span class="icon-[humbleicons--times] w-7 h-7 cursor-pointer" id="FilterProductClose"></span>
+            <p class="text-center text-lg mb-3">تعیین قیمت</p>
+            <div class="flex flex-wrap md:flex-nowrap mb-3">
+                <div class="w-full mb-3 md:mb-0 md:w-1/2 flex flex-col items-center px-1">
+                    <label for="">از (تومان)</label>
+                    <input type="number" class="input-cart">
+                </div>
+                <div class="w-full md:w-1/2 flex flex-col items-center px-1">
+                    <label for="">تا (تومان)</label>
+                    <input type="number" class="input-cart">
+                </div>
+            </div>
+            <button class="w-full btn-secondary rounded-full py-2 bg-secondary text-white">انتخاب قیمت</button>
+            <a href="" class="btn-primary-fill block rounded-full py-1 mt-4 text-center w-full">انتخاب محصولات ویژه</a>
+        </form>
+    </div>
+    <div class="w-full h-full fixed top-full left-0 z-50 flex justify-center items-end md:items-center bg-transparent transition-all duration-300 backdrop-blur-xl"
+        id="SortProduct">
+        <form
+            class="w-full md:w-6/12 pt-12 pb-10 bg-white shadow-[0_-25px_50px_-15px_rgb(0,0,0,0.55)] px-6 rounded-t-3xl md:rounded-3xl">
+            <span class="icon-[humbleicons--times] w-7 h-7 cursor-pointer" id="SortProductClose"></span>
+            <p class="text-center text-lg mb-3">تعیین ترتیب</p>
+            <a href="" class="btn-primary-fill block rounded-full py-1 mt-4 text-center w-full">جدید ترین</a>
+            <a href="" class="btn-primary-fill block rounded-full py-1 mt-4 text-center w-full">گران ترین</a>
+            <a href="" class="btn-primary-fill block rounded-full py-1 mt-4 text-center w-full">ارزان ترین</a>
         </form>
     </div>
 </body>
@@ -399,14 +418,25 @@
     }
 
     // for login popup 
-    $(".OpenLoginPopup").click(function (e) {
+    $("#FilterProductOpen").click(function (e) {
         e.preventDefault();
-        $("#LoginPopup").css("top", "0px");
+        $("#FilterProduct").css("top", "0px");
         $("body").css("overflow-y", "hidden");
     });
-    $("#CloseLoginPopup").click(function (e) {
+    $("#FilterProductClose").click(function (e) {
         e.preventDefault();
-        $("#LoginPopup").css("top", "100%");
+        $("#FilterProduct").css("top", "100%");
+        $("body").css("overflow-y", "scroll");
+    });
+    // for login popup 
+    $("#SortProductOpen").click(function (e) {
+        e.preventDefault();
+        $("#SortProduct").css("top", "0px");
+        $("body").css("overflow-y", "hidden");
+    });
+    $("#SortProductClose").click(function (e) {
+        e.preventDefault();
+        $("#SortProduct").css("top", "100%");
         $("body").css("overflow-y", "scroll");
     });
 </script>

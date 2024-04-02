@@ -20,5 +20,5 @@ module.exports = {
   plugins: [addDynamicIconSelectors(), require("@tailwindcss/typography")],
 };
 
-//npx tailwindcss -i ./css/input.css -o ./css/style.css --watch
+//باکس پوچ 300 گرمی
 //npm install --save-dev @iconify/tailwind
